@@ -8,6 +8,15 @@ export default function TerminalCLI({ isOpen, onClose }) {
   ]);
   const [inputVal, setInputVal] = useState('');
   const outputRef = useRef(null);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(() => {
+        if (inputRef.current) inputRef.current.focus();
+      }, 50);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     if (outputRef.current) {
@@ -19,86 +28,172 @@ export default function TerminalCLI({ isOpen, onClose }) {
 
   const handleCommand = (e) => {
     e.preventDefault();
-    const cmd = inputVal.trim().toLowerCase();
+    const rawCmd = inputVal.trim();
+    const cmd = rawCmd.toLowerCase();
     if (!cmd) return;
 
-    const newLogs = [...history, { type: 'user', text: `> ${cmd}` }];
+    const newLogs = [...history, { type: 'user', text: `> ${rawCmd}` }];
 
     switch (cmd) {
       case 'help':
+      case '?':
+      case 'ls':
+      case 'dir':
         newLogs.push({
           type: 'output',
           text: `Available commands:
-  • about      - Brief summary of Rohan Tidke
-  • skills     - Primary backend tech stack
-  • projects   - Featured engineering projects
-  • exp        - Work internship experience
-  • edu        - Education timeline & CGPA
-  • contact    - Email, phone & social profiles
-  • clear      - Clear terminal output
-  • sudo hire  - Direct offer acceptance!`
+  • about        - Brief summary of Rohan Tidke
+  • skills       - Primary backend tech stack
+  • projects     - Featured engineering projects
+  • exp          - Work internship experience
+  • edu          - Education timeline & CGPA
+  • certs        - AWS Cloud certifications & training
+  • leetcode     - LeetCode problem-solving stats
+  • github       - Official GitHub telemetry
+  • resume       - Resume overview & download info
+  • contact      - Direct email, phone & social profiles
+  • clear        - Clear terminal logs
+  • sudo hire    - Direct offer acceptance!
+  • exit         - Close CLI window`
         });
         break;
+
       case 'about':
+      case 'whoami':
+      case 'bio':
         newLogs.push({
           type: 'output',
-          text: 'Rohan Tidke: Backend Developer & Final-Year Computer Engineering Student (CGPA 8.5, expected 2027). Specialized in Spring Boot 3, REST APIs, Microservices, and Fraud Detection Engines.'
+          text: 'Rohan Tidke: Computer Engineering student (CGPA 8.5, expected 2027) with internship experience building REST APIs using Java and Spring Boot. Strong in Spring Security, JPA/Hibernate, SQL, microservices, and AWS (Certified Cloud Practitioner).'
         });
         break;
+
       case 'skills':
+      case 'stack':
+      case 'tech':
         newLogs.push({
           type: 'output',
           text: `• Languages: Java (primary), Python, SQL, JavaScript, C++
-• Backend: Spring Boot 3, Spring Security (JWT), FastAPI, JPA/Hibernate
-• Databases & Distributed Systems: MySQL, MongoDB, PostgreSQL, Kafka, Redis
-• Cloud & DevOps: Docker, Git, Maven, Postman, Linux`
+• Backend: Spring Boot 3, Spring MVC, Spring Security (JWT), JPA/Hibernate, REST APIs, Microservices, FastAPI
+• AI & Data: RAG, LangChain, Vector Embeddings, Semantic Retrieval, Data Cleaning, Exploratory Data Analysis, NumPy, Pandas
+• Databases: MySQL, PostgreSQL, MongoDB
+• Cloud & Tools: AWS, Docker, Git, Maven, JUnit, Postman, Swagger`
         });
         break;
+
       case 'projects':
+      case 'work':
+      case 'repo':
         newLogs.push({
           type: 'output',
-          text: `1. Credential Validator Platform: Spring Boot 3 + FastAPI + Solidity 7-layer fraud engine with OCR & Merkle root proofing.
-2. RAG Platform: Python, LangChain, Vector DBs document-grounded question answering system.`
+          text: `1. Credential Validator Platform – Microservices-Based Fraud Detection:
+   • Spring Boot 3, FastAPI, React, TypeScript, MySQL, Solidity (5 microservices).
+   • 7-layer fraud engine using Tesseract OCR, OpenCV, SHA-256, and Ethereum Merkle proofs (95% detection accuracy).
+2. RAG Platform – Document Question Answering:
+   • Python, LangChain, FAISS, ChromaDB document-grounded question answering system.`
         });
         break;
+
       case 'exp':
+      case 'experience':
         newLogs.push({
           type: 'output',
-          text: `• Java Developer Intern @ Shri Software Technologies (July 2023 - Oct 2023)
-• Network Engineer Intern @ Shri Software Technologies (Nov 2023 - Feb 2024)`
+          text: `• Java Developer Intern @ Shri Software Technologies (Jul 2023 – Oct 2023):
+   - Built REST APIs for a student management module using Java, Spring Boot, and JPA/Hibernate.
+   - Integrated with MySQL, PostgreSQL, and MongoDB. Tested APIs with Postman and followed Git workflow.`
         });
         break;
+
       case 'edu':
+      case 'education':
         newLogs.push({
           type: 'output',
-          text: `• B.E. Computer Engineering - Bharati Vidyapeeth's College of Engineering, Pune (8.5 CGPA, Expected 2027)
-• Diploma Computer Engineering - K.P.C.Y. Polytechnic (88.46%)
-• SSC Secondary Education - Shri Yogeshwari Nutan Vidyalaya (95.60%)`
+          text: `• Bharati Vidyapeeth’s College of Engineering, Lavale, Pune (Expected 2027)
+   - B.E. Computer Engineering | CGPA: 8.5
+• Yogeshwari Polytechnic, Ambajogai (2021 – 2024)
+   - Diploma in Computer Engineering | 88.46%
+• Shri Yogeshwari Nutan Vidyalaya, Ambajogai (2021)
+   - SSC Secondary Education | 95.60%`
         });
         break;
+
+      case 'certs':
+      case 'certifications':
+        newLogs.push({
+          type: 'output',
+          text: `• AWS Certified Cloud Practitioner – Amazon Web Services (2025)
+• AWS Cloud Computing Workshop (EC2, S3, VPC, IAM) – Tech Bodhi & AWS (2024)
+• Advanced Java Programming – Shri Software Solutions & Training Center (2023)
+• Python NumPy & Pandas Industrial Training – Shri Software Solutions & Training Center (2023)`
+        });
+        break;
+
+      case 'leetcode':
+      case 'lc':
+        newLogs.push({
+          type: 'output',
+          text: `• Profile: https://leetcode.com/u/rohan6086/
+• Total Solved: 120+ Problems
+• Skills: Algorithms, Data Structures, Array, Hash Table, Dynamic Programming, Strings`
+        });
+        break;
+
+      case 'github':
+      case 'gh':
+        newLogs.push({
+          type: 'output',
+          text: `• Profile: https://github.com/rohantidke
+• Account: @rohantidke
+• Contributions: 169+ in the past year | 39 active days | 7-day max streak`
+        });
+        break;
+
+      case 'resume':
+      case 'cv':
+      case 'cat resume':
+        newLogs.push({
+          type: 'output',
+          text: `• Resume PDF hosted at: /Rohan_Tidke_Resume.pdf
+• Status: Verified Original Document Uploaded
+• Click '📄 View Resume PDF' on header or hero to open full viewer.`
+        });
+        break;
+
       case 'contact':
+      case 'email':
+      case 'phone':
         newLogs.push({
           type: 'output',
           text: `• Email: rohantidke6086@gmail.com
-• Phone: +91 93257 90846
-• GitHub: github.com/rohantidke
-• LinkedIn: linkedin.com/in/rohan-tidke-31510a26b`
+• Phone: +91-8208391705
+• LinkedIn: linkedin.com/in/rohan-tidke-31510a26b
+• GitHub: github.com/rohantidke`
         });
         break;
+
       case 'clear':
+      case 'cls':
         setHistory([]);
         setInputVal('');
         return;
+
       case 'sudo hire':
+      case 'hire':
         newLogs.push({
           type: 'success',
-          text: "🎉 Offer accepted! Rohan Tidke is ready to build high-scale backend services with your engineering team."
+          text: "🎉 Offer accepted! Rohan Tidke is ready to build high-scale backend microservices with your engineering team."
         });
         break;
+
+      case 'exit':
+      case 'quit':
+      case 'close':
+        onClose();
+        return;
+
       default:
         newLogs.push({
           type: 'error',
-          text: `Command not found: '${cmd}'. Type 'help' for available commands.`
+          text: `Command not found: '${rawCmd}'. Type 'help' for available commands.`
         });
     }
 
@@ -107,23 +202,30 @@ export default function TerminalCLI({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
-      <div className="w-full max-w-2xl rounded-2xl bg-black border border-emerald-500/40 shadow-2xl overflow-hidden font-mono text-xs">
-        
-        <div className="bg-black px-4 py-2.5 flex items-center justify-between border-b border-white/10">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md cursor-default"
+      onClick={() => inputRef.current && inputRef.current.focus()}
+    >
+      <div 
+        className="w-full max-w-2xl rounded-2xl bg-black border border-emerald-500/40 shadow-2xl overflow-hidden font-mono text-xs"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="bg-black px-4 py-2.5 flex items-center justify-between border-b border-white/10 select-none">
           <div className="flex items-center gap-2">
-            <button onClick={onClose} className="h-3 w-3 rounded-full bg-red-500 cursor-pointer"></button>
+            <button onClick={onClose} className="h-3 w-3 rounded-full bg-red-500 cursor-pointer" title="Close"></button>
             <span className="h-3 w-3 rounded-full bg-yellow-500"></span>
             <span className="h-3 w-3 rounded-full bg-green-500"></span>
-            <span className="text-slate-400 text-[11px] ml-2">rohan@developer-terminal:~</span>
+            <span className="text-emerald-400 font-bold text-[11px] ml-2">rohan@developer-terminal:~</span>
           </div>
-          <button onClick={onClose} className="text-slate-400 hover:text-white">✕</button>
+          <button onClick={onClose} className="text-slate-400 hover:text-white font-bold text-sm cursor-pointer">✕</button>
         </div>
 
-        <div ref={outputRef} className="p-4 h-80 overflow-y-auto space-y-2 text-slate-300">
+        {/* Output Logs */}
+        <div ref={outputRef} className="p-4 h-80 overflow-y-auto space-y-2 text-slate-300 select-text">
           {history.map((item, i) => (
             <div key={i}>
-              {item.type === 'user' && <p className="text-white"><span className="text-emerald-400">&gt;</span> {item.text.replace('> ', '')}</p>}
+              {item.type === 'user' && <p className="text-white font-bold"><span className="text-emerald-400">&gt;</span> {item.text.replace('> ', '')}</p>}
               {item.type === 'system' && <p className="text-emerald-400">{item.text}</p>}
               {item.type === 'output' && <pre className="whitespace-pre-wrap font-mono text-slate-300 ml-2">{item.text}</pre>}
               {item.type === 'success' && <p className="text-emerald-400 font-bold ml-2">{item.text}</p>}
@@ -132,15 +234,17 @@ export default function TerminalCLI({ isOpen, onClose }) {
           ))}
         </div>
 
+        {/* Form Input */}
         <form onSubmit={handleCommand} className="p-3 bg-black/90 border-t border-white/10 flex items-center gap-2">
           <span className="text-emerald-400 font-bold">&gt;</span>
           <input 
+            ref={inputRef}
             type="text" 
             autoFocus 
             value={inputVal} 
             onChange={(e) => setInputVal(e.target.value)} 
-            placeholder="type a command (e.g. help, skills, projects)..." 
-            className="w-full bg-transparent text-emerald-300 focus:outline-none placeholder-slate-600"
+            placeholder="type a command (e.g. help, skills, projects, leetcode, contact)..." 
+            className="w-full bg-transparent text-emerald-300 focus:outline-none placeholder-slate-600 font-mono text-xs"
           />
         </form>
 
