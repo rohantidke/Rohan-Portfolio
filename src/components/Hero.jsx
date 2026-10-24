@@ -13,7 +13,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Available for Backend Engineer & Software Engineering Roles
+              Available for Backend & Full-Stack Software Engineering Roles
             </span>
           </div>
 
@@ -22,16 +22,16 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
               Rohan Tidke
             </h1>
             <p className="mt-1.5 text-base sm:text-lg font-medium text-white font-mono">
-              Computer Engineering Student & Backend Developer
+              Java Full Stack & Backend Developer · Spring Boot & Microservices
             </p>
           </div>
 
           <p className="max-w-2xl text-sm sm:text-base leading-relaxed text-white">
-            Computer Engineering student (<span className="text-white font-bold">CGPA 8.5</span>, Bharati Vidyapeeth Lavale Pune, Expected 2027) with internship experience building REST APIs using Java and Spring Boot. Strong in Spring Security, JPA/Hibernate, SQL, and backend architecture, with hands-on experience developing microservices and document-verification systems.
+            Computer Engineering student (B.E. graduating 2027, <span className="text-white font-bold">CGPA 8.5</span>, Bharati Vidyapeeth’s COE Lavale, Pune) with hands-on software development experience building backend and full-stack applications using <span className="text-white font-bold">Java, Spring Boot, REST APIs, and microservices</span>.
           </p>
 
           <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-100">
-            <span className="text-emerald-400 font-bold">AWS Certified Cloud Practitioner</span> with <span className="text-amber-400 font-mono font-bold">120+ LeetCode problems solved</span>. Built microservices-based fraud detection engines (Tesseract OCR, OpenCV, Ethereum Merkle proofs) and document-grounded RAG platforms (Python, LangChain, FAISS, ChromaDB).
+            Built <span className="text-emerald-400 font-bold font-mono">37 REST endpoints</span> during internship and solved <span className="text-amber-400 font-mono font-bold">120+ LeetCode problems</span>, with strong foundations in DSA, OOP, backend development, and scalable cloud architectures (AWS, Docker).
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap pt-2">
@@ -64,8 +64,8 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
               <p className="mt-1 text-sm font-semibold text-white">B.E. Computer (8.5 CGPA)</p>
             </div>
             <div>
-              <p className="font-mono text-xs text-white uppercase tracking-wider">Cloud Certification</p>
-              <p className="mt-1 text-sm font-semibold text-emerald-400">AWS Certified Practitioner</p>
+              <p className="font-mono text-xs text-white uppercase tracking-wider">Experience</p>
+              <p className="mt-1 text-sm font-semibold text-emerald-400 font-mono">37 REST Endpoints</p>
             </div>
             <div>
               <p className="font-mono text-xs text-white uppercase tracking-wider">Problem Solving</p>
@@ -95,7 +95,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-white">Rohan Tidke</h3>
-                  <p className="text-xs text-white font-mono">Java Developer Intern</p>
+                  <p className="text-xs text-white font-mono">Java Full Stack Development Intern</p>
                   <p className="text-xs text-white">Pune, Maharashtra, India · +91-8208391705</p>
                 </div>
               </div>
@@ -109,16 +109,17 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
               <div className="space-y-1.5">
                 <p className="text-xs font-mono text-white">Primary Tech Stack</p>
                 <div className="flex flex-wrap gap-1.5">
-                  <span className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs text-white font-mono">Java (primary)</span>
+                  <span className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs text-white font-mono">Java 21</span>
                   <span className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs text-white font-mono">Spring Boot 3</span>
                   <span className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs text-white font-mono">Spring Security</span>
-                  <span className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs text-white font-mono">FastAPI & RAG</span>
+                  <span className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs text-white font-mono">React 19</span>
+                  <span className="rounded-full border border-white/20 bg-white/5 px-2.5 py-0.5 text-xs text-white font-mono">FastAPI</span>
                 </div>
               </div>
 
               <div className="space-y-1.5">
                 <p className="text-xs font-mono text-white">Certifications & Metrics</p>
-                <p className="text-xs font-medium text-white">☁️ AWS Certified Cloud Practitioner (2025)</p>
+                <p className="text-xs font-medium text-white">☁️ AWS Cloud Computing Workshop (EC2, S3, VPC, IAM)</p>
                 <p className="text-xs font-medium text-amber-300 font-mono">🧩 120+ LeetCode Problems Solved</p>
               </div>
             </div>

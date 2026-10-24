@@ -3,35 +3,27 @@ import React from 'react';
 export default function Education() {
   const certs = [
     {
-      title: 'AWS Certified Cloud Practitioner',
-      issuer: 'Amazon Web Services (AWS)',
-      date: '2025',
-      id: 'Official AWS Certification',
+      title: 'AWS Cloud Computing Workshop (EC2, S3, VPC, IAM)',
+      issuer: 'Tech Bodhi, Pune',
+      date: 'Oct 2024',
+      id: 'Infrastructure: EC2, S3, VPC, and IAM',
       badge: 'AWS',
       color: 'border-emerald-500/30 text-emerald-400 bg-emerald-500/10'
     },
     {
-      title: 'AWS Cloud Computing Workshop (EC2, S3, VPC, IAM)',
-      issuer: 'Tech Bodhi & AWS',
-      date: '2024',
-      id: 'Topic: EC2, S3, VPC, IAM Infrastructure',
-      badge: 'CLOUD',
-      color: 'border-cyan-500/30 text-cyan-400 bg-cyan-500/10'
-    },
-    {
       title: 'Advanced Java Programming',
       issuer: 'Shri Software Solutions & Training Center',
-      date: '2023',
-      id: 'Java & Object Oriented Programming',
+      date: 'Aug–Nov 2023',
+      id: 'Enterprise Java, OOP & Backend Architecture',
       badge: 'JAVA',
       color: 'border-amber-500/30 text-amber-400 bg-amber-500/10'
     },
     {
-      title: 'Python NumPy & Pandas Industrial Training',
-      issuer: 'Shri Software Solutions & Training Center',
-      date: '2023',
-      id: 'Data Analysis & Industrial Training',
-      badge: 'PYTHON',
+      title: 'AI Applications Workflow using MATLAB',
+      issuer: 'BVCOE Lavale, with MathWorks',
+      date: 'Jan–Feb 2025',
+      id: 'AI & Data Processing Workflows',
+      badge: 'AI/ML',
       color: 'border-blue-500/30 text-blue-400 bg-blue-500/10'
     },
   ];
@@ -46,7 +38,7 @@ export default function Education() {
             Academic & Professional Qualifications
           </span>
           <h2 className="text-3xl font-extrabold text-white tracking-tight mt-1">Education & Certifications</h2>
-          <p className="mt-1 text-sm text-slate-300">Academic accomplishments, degrees, and official cloud certifications.</p>
+          <p className="mt-1 text-sm text-slate-300">Academic accomplishments, degrees, and industry technical training.</p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">

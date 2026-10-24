@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 export default function TerminalCLI({ isOpen, onClose }) {
   const [history, setHistory] = useState([
     { type: 'system', text: '==================================================' },
-    { type: 'system', text: '  🚀 ROHAN TIDKE DEVELOPER CLI [Version 1.0.0]' },
+    { type: 'system', text: '  🚀 ROHAN TIDKE DEVELOPER CLI [Version 2.0.0]' },
     { type: 'system', text: "  Type 'help' or 'ls' to view all available commands." },
     { type: 'system', text: '==================================================' },
   ]);
@@ -48,9 +48,9 @@ AVAILABLE CLI COMMANDS & SYSTEM DIRECTORIES:
   • about        - Full bio, background & summary of Rohan Tidke
   • skills       - Categorized technical skills (Languages, Backend, Cloud, DBs)
   • projects     - Detailed architecture breakdown of featured projects
-  • exp          - Work experience & Java Developer Internship details
+  • exp          - Work experience & Java Full Stack internships
   • edu          - Academic degrees, CGPA (8.5), and college details
-  • certs        - AWS Certified Cloud Practitioner & technical credentials
+  • certs        - AWS Cloud Computing, Java & AI credentials
   • leetcode     - Problem-solving analytics (120+ solved) & profile
   • github       - Live GitHub telemetry, commits & repository stats
   • resume       - Resume document details & download link
@@ -67,16 +67,15 @@ AVAILABLE CLI COMMANDS & SYSTEM DIRECTORIES:
         newLogs.push({
           type: 'output',
           text: `==================================================
-ROHAN TIDKE - BACKEND DEVELOPER & COMPUTER ENGINEER
+ROHAN TIDKE - FULL STACK & BACKEND SOFTWARE ENGINEER
 ==================================================
-• Status: Final-Year Computer Engineering Student (CGPA 8.5, Expected 2027)
+• Status: Computer Engineering Student (B.E. graduating 2027, CGPA 8.5)
 • Institution: Bharati Vidyapeeth’s College of Engineering, Lavale, Pune
-• Certification: AWS Certified Cloud Practitioner (2025)
-• Summary:
-  Computer Engineering student with internship experience building production
-  REST APIs using Java and Spring Boot. Strong in Spring Security, JPA/Hibernate,
-  SQL, and backend microservices architecture, with hands-on experience developing
-  document verification systems & RAG AI pipelines. 120+ LeetCode problems solved.`
+• Professional Summary:
+  Hands-on software development experience building backend and full-stack applications
+  using Java, Spring Boot, REST APIs, and microservices. Built 37 REST endpoints during
+  an internship and solved 120+ LeetCode problems, with strong foundations in DSA, OOP,
+  backend development, and problem solving.`
         });
         break;
 
@@ -86,24 +85,28 @@ ROHAN TIDKE - BACKEND DEVELOPER & COMPUTER ENGINEER
         newLogs.push({
           type: 'output',
           text: `==================================================
-TECHNICAL SKILLS MATRIX
+TECHNICAL SKILLS MATRIX (FROM OFFICIAL RESUME)
 ==================================================
-[1] Languages:
-    • Java (Primary), Python, SQL, JavaScript, C++
+[1] Programming Languages:
+    • Java (Primary), Python, JavaScript, C++, SQL
 
-[2] Backend & Frameworks:
-    • Spring Boot 3, Spring MVC, Spring Security (JWT)
-    • JPA / Hibernate, REST APIs, Microservices, FastAPI
+[2] Backend Development:
+    • Spring Boot 3, Spring MVC, Spring Security (JWT), REST APIs, Microservices
 
-[3] AI & Data Science:
-    • RAG, LangChain, Vector Embeddings, Semantic Retrieval
-    • Data Cleaning, Exploratory Data Analysis, NumPy, Pandas
+[3] Persistence & Databases:
+    • JPA, Hibernate, MySQL, PostgreSQL, MongoDB, Redis
 
-[4] Databases:
-    • MySQL, PostgreSQL, MongoDB
+[4] Messaging & API Documentation:
+    • Apache Kafka, Swagger/OpenAPI
 
-[5] Cloud & DevOps Tools:
-    • AWS (Certified Cloud Practitioner), Docker, Git, Maven, JUnit, Postman, Swagger`
+[5] Cloud & DevOps:
+    • AWS (EC2, S3, VPC, IAM), Docker, Kubernetes, Jenkins, CI/CD
+
+[6] Build & Development Tools:
+    • Maven, Gradle, Git, IntelliJ IDEA, Visual Studio Code
+
+[7] Core Concepts:
+    • Data Structures & Algorithms, Object-Oriented Programming (OOP), Computer Network (CN)`
         });
         break;
 
@@ -116,14 +119,16 @@ TECHNICAL SKILLS MATRIX
 FEATURED ENGINEERING PROJECTS
 ==================================================
 [1] Credential Validator Platform – Microservices Fraud Detection
-    • Architecture: 5 Microservices (Spring Boot 3, FastAPI, React 18 + TypeScript, Solidity)
-    • 7-Layer Fraud Engine: Tesseract OCR, OpenCV, SHA-256 hashing, Merkle root proofs on local Ethereum (Hardhat).
-    • Security & Batch Ops: Spring Security (JWT), multi-tenant MySQL schemas, ZXing QR codes, PDF/ZIP batch verification.
-    • Verified Results: 95% detection accuracy across 20 genuine & 20 tampered files; batch verification of 50 documents completes in 20 seconds.
+    • Stack: Spring Boot 3, FastAPI, React, TypeScript, MySQL, Solidity
+    • 7-Layer Fraud Engine: Tesseract OCR, OpenCV, SHA-256, and Merkle-root proofs on an Ethereum/Hardhat network.
+    • Results: 95% detection accuracy across 40-document test suite, verifying 50 documents in ∼20 seconds.
+    • Architecture: 5 independent microservices with JWT-secured RBAC endpoints, multi-tenant MySQL schemas, ZXing QR generation, automated PDF/ZIP batch verification.
 
-[2] RAG Platform – Document Question Answering
-    • Stack: Python, LangChain, FAISS, ChromaDB
-    • Pipeline: Document-grounded Q&A with document chunking, embedding generation, and semantic retrieval to maximize response accuracy.`
+[2] Full-Stack RAG Chat Platform
+    • Stack: Next.js, Spring Boot, FastAPI, LangChain, ChromaDB, FAISS
+    • Optimized Pipeline: Page-aware chunking, ChromaDB, cross-encoder reranking.
+    • Evaluation: 83.3% Recall@5, 0.83 MRR, 100% correct abstention, 76 ms average latency on golden evaluation set.
+    • Architecture: Decoupled 3-microservice system (Next.js frontend, Spring Boot API gateway with JWT & rate limiting, FastAPI backend with SSE streaming).`
         });
         break;
 
@@ -134,14 +139,22 @@ FEATURED ENGINEERING PROJECTS
           text: `==================================================
 PROFESSIONAL WORK EXPERIENCE
 ==================================================
-• Role: Java Developer Intern
-• Company: Shri Software Technologies
-• Period: Jul 2023 – Oct 2023
-• Key Responsibilities & Achievements:
-  - Built REST APIs for a student management module using Java, Spring Boot, and JPA/Hibernate.
-  - Integrated backend services with MySQL, PostgreSQL, and MongoDB databases.
-  - Tested APIs using Postman, fixed bugs, and followed the team's Git workflow & code reviews.
-  - Applied layered software architecture, exception handling, and API documentation.`
+[1] Java Full Stack Development Intern
+    • Company: Shorat Innovations Pvt. Ltd., Pune (Cert. No. SI-INT2025/304)
+    • Timeline: Jan 2026 – Feb 2026
+    • Highlights:
+      - Full-stack Complaint Management System for 3 user roles, 37 REST endpoints, 10 Spring Boot controllers, 26 React pages (Java 21, JPA/Hibernate, React 19, Vite).
+      - Stateless RBAC across 32 protected endpoints using Spring Security + JWT, documented via OpenAPI/Swagger.
+      - Resolved cross-database enum mapping errors with custom JPA AttributeConverters; standardized responses across 6 exception types via @RestControllerAdvice.
+      - Containerized services into 3-container Docker Compose stack (MySQL, Spring Boot, Nginx/React); deployed to Render, Supabase, Vercel.
+
+[2] Java Developer Intern (Industrial Training)
+    • Company: Shri Software Solutions & Training Center (MSME, Govt. of India)
+    • Timeline: Aug 2023 – Nov 2023
+    • Highlights:
+      - Developed core business logic for complaint lifecycles and SLA escalations; delivered 30 REST endpoints thoroughly validated via Postman.
+      - Polyglot persistence: MySQL via JPA/Hibernate for relational data, MongoDB via Spring Data for high-volume audit logs.
+      - Resolved 15+ authentication and validation edge cases via centralized @ControllerAdvice.`
         });
         break;
 
@@ -154,18 +167,15 @@ ACADEMIC QUALIFICATIONS
 ==================================================
 1. Bachelor of Engineering in Computer Engineering
    • Institution: Bharati Vidyapeeth’s College of Engineering, Lavale, Pune
-   • Timeline: Expected 2027
-   • Grade: CGPA 8.5 / 10
+   • Timeline: Expected 2027 | Grade: CGPA 8.5 / 10
 
 2. Diploma in Computer Engineering
    • Institution: Yogeshwari Polytechnic, Ambajogai
-   • Timeline: 2021 – 2024
-   • Grade: 88.46%
+   • Timeline: 2021 – 2024 | Grade: 88.46%
 
 3. SSC Secondary Education
    • Institution: Shri Yogeshwari Nutan Vidyalaya, Ambajogai
-   • Year: 2021
-   • Grade: 95.60%`
+   • Year: 2021 | Grade: 95.60%`
         });
         break;
 
@@ -174,12 +184,11 @@ ACADEMIC QUALIFICATIONS
         newLogs.push({
           type: 'output',
           text: `==================================================
-VERIFIED CERTIFICATIONS & TRAINING
+CERTIFICATIONS & TRAINING
 ==================================================
-• AWS Certified Cloud Practitioner – Amazon Web Services (2025)
-• AWS Cloud Computing Workshop (EC2, S3, VPC, IAM) – Tech Bodhi & AWS (2024)
-• Advanced Java Programming – Shri Software Solutions & Training Center (2023)
-• Python NumPy & Pandas Industrial Training – Shri Software Solutions & Training Center (2023)`
+• AWS Cloud Computing Workshop (EC2, S3, VPC, IAM) – Tech Bodhi, Pune (Oct 2024)
+• Advanced Java Programming – Shri Software Solutions & Training Center (Aug–Nov 2023)
+• AI Applications Workflow using MATLAB – BVCOE Lavale, with MathWorks (Jan–Feb 2025)`
         });
         break;
 
@@ -193,7 +202,7 @@ LEETCODE PROBLEM SOLVING METRICS
 • Profile URL: https://leetcode.com/u/rohan6086/
 • Username: @rohan6086
 • Total Problems Solved: 120+ Solved
-• Key Topics: Algorithms, Data Structures, Hash Tables, Strings, Arrays, Dynamic Programming`
+• Key Topics: Algorithms, Data Structures, Arrays, Hash Tables, Dynamic Programming, Strings`
         });
         break;
 
@@ -206,9 +215,7 @@ LIVE GITHUB TELEMETRY
 ==================================================
 • Profile URL: https://github.com/rohantidke
 • Username: @rohantidke
-• Annual Activity: 169+ contributions in the past year
-• Total Active Days: 39 days
-• Max Streak: 7 consecutive days`
+• Repositories: Full-Stack Complaint Management, Credential Validator, RAG Pipeline`
         });
         break;
 
@@ -221,7 +228,7 @@ LIVE GITHUB TELEMETRY
 RESUME DOCUMENT INFORMATION
 ==================================================
 • File Path: /Rohan_Tidke_Resume.pdf
-• Status: Verified Original Document Loaded
+• Status: 100% Exact Uploaded Resume Active
 • Access: Click '📄 View Resume PDF' in top navigation or hero section to view & download.`
         });
         break;
@@ -254,7 +261,7 @@ DIRECT CONTACT DIRECTORY
           type: 'success',
           text: `==================================================
 🎉 OFFER ACCEPTED! 
-Rohan Tidke is available for Software Engineering & Backend Developer roles.
+Rohan Tidke is available for Software Engineering & Full Stack roles.
 Direct Contact: rohantidke6086@gmail.com | +91-8208391705
 ==================================================`
         });
@@ -319,7 +326,7 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
             autoFocus 
             value={inputVal} 
             onChange={(e) => setInputVal(e.target.value)} 
-            placeholder="type a command (e.g. help, skills, projects, leetcode, contact)..." 
+            placeholder="type a command (e.g. help, skills, projects, exp, contact)..." 
             className="w-full bg-transparent text-emerald-300 focus:outline-none placeholder-slate-600 font-mono text-xs"
           />
         </form>

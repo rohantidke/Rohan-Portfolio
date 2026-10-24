@@ -3,29 +3,39 @@ import React from 'react';
 export default function TechStack() {
   const stackCategories = [
     {
-      title: 'Languages',
-      skills: 'Java (primary), Python, SQL, JavaScript, C++',
+      title: 'Programming Languages',
+      skills: 'Java (Primary), Python, JavaScript, C++, SQL',
       icon: '⚡'
     },
     {
-      title: 'Backend',
-      skills: 'Spring Boot 3, Spring MVC, Spring Security (JWT), JPA/Hibernate, REST APIs, Microservices, FastAPI',
+      title: 'Backend Development',
+      skills: 'Spring Boot 3, Spring MVC, Spring Security (JWT), REST APIs, Microservices',
       icon: '⚙️'
     },
     {
-      title: 'AI & Data',
-      skills: 'RAG, LangChain, Vector Embeddings, Semantic Retrieval, Data Cleaning, Exploratory Data Analysis, NumPy, Pandas',
-      icon: '🤖'
+      title: 'Persistence & Databases',
+      skills: 'JPA, Hibernate, MySQL, PostgreSQL, MongoDB, Redis',
+      icon: '💾'
     },
     {
-      title: 'Databases',
-      skills: 'MySQL, PostgreSQL, MongoDB',
-      icon: '🗄️'
+      title: 'Messaging & API Docs',
+      skills: 'Apache Kafka, Swagger/OpenAPI',
+      icon: '📡'
     },
     {
-      title: 'Cloud & Tools',
-      skills: 'AWS (Certified Cloud Practitioner), Docker, Git, Maven, JUnit, Postman, Swagger',
+      title: 'Cloud & DevOps',
+      skills: 'AWS (EC2, S3, VPC, IAM), Docker, Kubernetes, Jenkins, CI/CD',
+      icon: '☁️'
+    },
+    {
+      title: 'Build & Dev Tools',
+      skills: 'Maven, Gradle, Git, IntelliJ IDEA, Visual Studio Code',
       icon: '🛠️'
+    },
+    {
+      title: 'Core Concepts',
+      skills: 'Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP), Computer Networks (CN)',
+      icon: '🧠'
     }
   ];
 
