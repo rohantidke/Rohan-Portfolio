@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import TechStack from './components/TechStack';
@@ -55,11 +56,11 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-black text-slate-100 selection:bg-emerald-500 selection:text-black">
-      {/* Background ambient lighting */}
-      <div className="fixed top-10 -left-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="fixed top-1/3 -right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="fixed bottom-10 left-1/3 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div className="relative min-h-screen bg-[#090d14] text-slate-100 selection:bg-sky-500 selection:text-slate-950">
+      {/* Background ambient lighting - sophisticated charcoal with subtle cyan/violet glows */}
+      <div className="fixed top-0 -left-20 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="fixed top-1/3 -right-20 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="fixed bottom-10 left-1/3 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <Header 
         onOpenCLI={() => setIsCLIOpen(true)}
@@ -76,35 +77,48 @@ export default function App() {
           showToast={showToast}
         />
 
-        {/* 2. Featured Engineering Projects & Systems */}
-        <Projects onOpenCaseStudy={(type) => setCaseStudyType(type)} />
+        {/* 2. Professional About Me & Background */}
+        <About onOpenResume={() => setIsResumeOpen(true)} />
 
-        {/* 3. Professional Work Experience & Internships */}
-        <Experience />
-
-        {/* 4. Core Technology Stack & Architecture */}
+        {/* 3. Core Technical Competencies & Skills */}
         <TechStack />
 
-        {/* 5. Live LeetCode Problem Solving Analytics */}
+        {/* 4. Featured Engineering Systems & Projects */}
+        <Projects onOpenCaseStudy={(type) => setCaseStudyType(type)} />
+
+        {/* 5. Professional Work Experience & Internships */}
+        <Experience />
+
+        {/* 6. Problem Solving & LeetCode Matrix */}
         <LeetCodeMatrix />
 
-        {/* 6. Verified GitHub Activity Telemetry & Heatmap */}
+        {/* 7. Verified GitHub Activity Telemetry & Heatmap */}
         <GitHubTelemetry />
 
-        {/* 7. Live System Observability & Performance Metrics */}
+        {/* 8. Live System Observability & Metrics */}
         <ObservabilityMonitor />
 
-        {/* 8. Academic Background & Education */}
+        {/* 9. Academic Background & Qualifications */}
         <Education />
 
-        {/* 9. Direct Contact & Collaboration */}
+        {/* 10. Direct Contact Channels */}
         <Contact showToast={showToast} />
       </main>
 
-      <footer className="border-t border-white/10 py-10 px-5 text-center text-xs text-slate-400 font-mono space-y-2 bg-black">
-        <p>© 2026 Rohan Tidke · Software Engineer & Backend Systems Architect</p>
-        <p className="text-[11px] text-slate-500">Built with React, Tailwind CSS, LeetCode Live API & Pure Black Glassmorphism</p>
-        <p className="text-[11px] text-emerald-400 font-semibold pt-1">Pune, India · rohantidke6086@gmail.com</p>
+      <footer className="border-t border-white/10 py-12 px-5 text-center text-xs text-slate-400 font-mono space-y-2 bg-[#06090e]">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-left space-y-1">
+            <p className="font-bold text-white text-sm">Rohan Tidke</p>
+            <p className="text-slate-400 text-xs">Java Backend Developer | Spring Boot | Microservices</p>
+          </div>
+          <div className="flex items-center gap-4 text-xs">
+            <a href="#home" className="hover:text-sky-400 transition-colors">Back to Top ↑</a>
+            <a href="https://github.com/rohantidke" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">GitHub ↗</a>
+            <a href="https://linkedin.com/in/rohan-tidke-31510a26b" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">LinkedIn ↗</a>
+            <a href="https://leetcode.com/u/rohan6086/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">LeetCode ↗</a>
+          </div>
+        </div>
+        <p className="text-[11px] text-slate-500 pt-4">© 2026 Rohan Tidke · Pune, India · rohantidke6086@gmail.com</p>
       </footer>
 
       {/* Modals & Overlays */}
@@ -138,7 +152,7 @@ export default function App() {
 
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 rounded-xl bg-emerald-500 text-slate-950 font-bold px-4 py-2.5 text-xs shadow-2xl flex items-center gap-2 animate-bounce">
+        <div className="fixed bottom-6 right-6 z-50 rounded-xl bg-sky-500 text-slate-950 font-bold px-4 py-2.5 text-xs shadow-2xl flex items-center gap-2 animate-bounce">
           <span>✓</span>
           <span>{toastMessage}</span>
         </div>

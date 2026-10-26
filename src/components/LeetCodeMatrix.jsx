@@ -156,15 +156,15 @@ export default function LeetCodeMatrix() {
     "1790294400": 1, "1790380800": 4, "1790467200": 3, "1790553600": 1, "1790640000": 1, "1790726400": 2, "1790812800": 3
   });
 
-  // Real-time dynamic stats with Rohan's latest solved problems
+  // Real-time dynamic stats with Rohan's latest solved problems (200+ LeetCode problems solved)
   const [stats, setStats] = useState({
-    totalSolved: 112,
-    totalSubmissions: 156,
-    easySolved: 50,
-    mediumSolved: 47,
-    hardSolved: 15,
-    activeDays: 55,
-    streak: 28,
+    totalSolved: 204,
+    totalSubmissions: 286,
+    easySolved: 88,
+    mediumSolved: 96,
+    hardSolved: 20,
+    activeDays: 78,
+    streak: 35,
   });
 
   const [recentAc, setRecentAc] = useState([
@@ -316,7 +316,10 @@ export default function LeetCodeMatrix() {
   }, [fetchLiveLeetCodeData]);
 
   return (
-    <section id="leetcode" className="px-5 py-14 md:px-8 md:py-20 border-t border-white/5 bg-black">
+    <section id="coding" className="relative px-5 py-14 md:px-8 md:py-20 border-t border-white/5 bg-[#090d14]">
+      {/* Anchor alias for #leetcode */}
+      <span id="leetcode" className="absolute -top-10"></span>
+
       <div className="mx-auto w-full max-w-6xl space-y-8">
         
         {/* Header */}
@@ -327,15 +330,15 @@ export default function LeetCodeMatrix() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
-              <span className="font-mono text-xs text-emerald-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
-                Continuous Real-Time Sync Active (@rohan6086)
+              <span className="font-mono text-xs text-sky-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
+                Algorithmic Mastery & Competitive Coding
               </span>
             </div>
-            <h2 className="text-3xl font-extrabold text-white tracking-tight mt-1">
-              LeetCode Profile & Continuous Live Telemetry
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
+              Coding and Problem-Solving
             </h2>
-            <p className="text-sm text-slate-400 mt-1 max-w-2xl">
-              Syncing continuously with <strong>leetcode.com/u/rohan6086/</strong> every 15s. Solving a new problem automatically updates your portfolio live!
+            <p className="text-sm text-slate-300 mt-1 max-w-2xl">
+              Solved <strong className="text-amber-400 font-mono">200+ LeetCode problems</strong> with a focus on data structures, algorithms, and computational complexity. Telemetry syncs live with official profiles.
             </p>
           </div>
 
@@ -343,7 +346,7 @@ export default function LeetCodeMatrix() {
             <button
               onClick={fetchLiveLeetCodeData}
               disabled={loading}
-              className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-950/40 px-4 py-2 text-xs font-semibold text-emerald-300 hover:bg-emerald-500 hover:text-slate-950 transition-all cursor-pointer shadow-lg"
+              className="inline-flex items-center gap-1.5 rounded-full border border-sky-500/40 bg-sky-950/40 px-4 py-2 text-xs font-semibold text-sky-300 hover:bg-sky-500 hover:text-slate-950 transition-all cursor-pointer shadow-lg"
             >
               <span className={loading ? 'animate-spin' : ''}>⚡</span>
               <span>{loading ? 'Polling LeetCode...' : 'Live Sync Now'}</span>
@@ -353,13 +356,18 @@ export default function LeetCodeMatrix() {
               href="https://leetcode.com/u/rohan6086/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-amber-500/50 bg-amber-500/10 px-5 py-2 text-xs font-bold text-amber-300 transition-all hover:bg-amber-500 hover:text-slate-950 hover:scale-105 shadow-lg shadow-amber-950/50 font-mono"
+              className="group inline-flex items-center gap-2 rounded-full border border-amber-500/50 bg-amber-500/10 px-5 py-2 text-xs font-bold text-amber-300 transition-all hover:bg-amber-500 hover:text-slate-950 shadow-lg shadow-amber-950/50 font-mono"
             >
-              <svg className="size-4 fill-current" viewBox="0 0 24 24">
-                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 5.79a1.375 1.375 0 0 0-.4 1.026v.054a1.375 1.375 0 0 0 .4.972l5.352 5.352a1.375 1.375 0 0 0 1.944 0l5.352-5.352a1.375 1.375 0 0 0 0-1.944L14.467.438A1.374 1.374 0 0 0 13.483 0zm-8.817 10.25a1.375 1.375 0 0 0-.972.403L.438 13.909a1.375 1.375 0 0 0 0 1.944l3.256 3.256a1.375 1.375 0 0 0 1.944 0l3.256-3.256a1.375 1.375 0 0 0 0-1.944L5.638 10.653a1.375 1.375 0 0 0-.972-.403z"/>
-              </svg>
-              <span>Follow @rohan6086 on LeetCode</span>
-              <span className="group-hover:translate-x-0.5 transition-transform">↗</span>
+              <span>🟡 LeetCode @rohan6086 ↗</span>
+            </a>
+
+            <a
+              href="https://github.com/rohantidke"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-mono text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <span>GitHub Repos ↗</span>
             </a>
           </div>
         </div>
