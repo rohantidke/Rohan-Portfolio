@@ -18,19 +18,19 @@ export default function CommandPalette({ isOpen, onClose }) {
   const filtered = items.filter(i => i.label.toLowerCase().includes(query.toLowerCase()));
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 p-4 bg-black/80 backdrop-blur-md">
-      <div className="w-full max-w-lg rounded-2xl glass-card border border-white/20 shadow-2xl overflow-hidden space-y-2">
-        <div className="p-3 border-b border-white/10 flex items-center gap-2">
-          <svg className="size-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 p-4 bg-[#0B1120]/80 backdrop-blur-md">
+      <div className="w-full max-w-lg rounded-2xl bg-[#111C32] border border-[#263449] shadow-2xl overflow-hidden space-y-2">
+        <div className="p-3 border-b border-[#263449] flex items-center gap-2">
+          <svg className="size-4 text-[#94A3B8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           <input 
             type="text" 
             autoFocus 
             value={query} 
             onChange={(e) => setQuery(e.target.value)} 
             placeholder="Search sections, projects, or skills..." 
-            className="w-full bg-transparent text-sm text-white placeholder-slate-500 focus:outline-none"
+            className="w-full bg-transparent text-sm text-[#F8FAFC] placeholder-[#94A3B8]/60 focus:outline-none"
           />
-          <button onClick={onClose} className="text-[10px] border border-white/20 rounded px-1.5 py-0.5 text-slate-400">ESC</button>
+          <button onClick={onClose} className="text-[10px] border border-[#263449] bg-[#0B1120] rounded px-1.5 py-0.5 text-[#94A3B8]">ESC</button>
         </div>
         
         <div className="p-2 max-h-64 overflow-y-auto space-y-1 text-xs">
@@ -40,14 +40,14 @@ export default function CommandPalette({ isOpen, onClose }) {
                 key={idx} 
                 href={item.href} 
                 onClick={onClose} 
-                className="flex items-center justify-between p-2 rounded-xl hover:bg-emerald-500/20 text-slate-200 hover:text-emerald-300"
+                className="flex items-center justify-between p-2 rounded-xl hover:bg-[#0B1120] text-[#CBD5E1] hover:text-[#F8FAFC] transition-colors"
               >
                 <span>{item.label}</span>
-                <span className="font-mono text-[10px] text-slate-400">{item.type}</span>
+                <span className="font-mono text-[10px] text-[#22D3EE]">{item.type}</span>
               </a>
             ))
           ) : (
-            <p className="p-3 text-slate-500 text-center">No results found for "{query}"</p>
+            <p className="p-3 text-[#94A3B8] text-center">No results found for "{query}"</p>
           )}
         </div>
       </div>

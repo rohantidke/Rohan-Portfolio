@@ -286,31 +286,31 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md cursor-default"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B1120]/80 backdrop-blur-md cursor-default"
       onClick={() => inputRef.current && inputRef.current.focus()}
     >
       <div 
-        className="w-full max-w-2xl rounded-2xl bg-black border border-emerald-500/40 shadow-2xl overflow-hidden font-mono text-xs"
+        className="w-full max-w-2xl rounded-2xl bg-[#0F172A] border border-[#263449] shadow-2xl overflow-hidden font-mono text-xs"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-black px-4 py-2.5 flex items-center justify-between border-b border-white/10 select-none">
+        <div className="bg-[#111C32] px-4 py-2.5 flex items-center justify-between border-b border-[#263449] select-none">
           <div className="flex items-center gap-2">
-            <button onClick={onClose} className="h-3 w-3 rounded-full bg-red-500 cursor-pointer" title="Close"></button>
-            <span className="h-3 w-3 rounded-full bg-yellow-500"></span>
-            <span className="h-3 w-3 rounded-full bg-green-500"></span>
-            <span className="text-emerald-400 font-bold text-[11px] ml-2">rohan@developer-terminal:~</span>
+            <button onClick={onClose} className="h-3 w-3 rounded-full bg-red-500/80 hover:bg-red-500 cursor-pointer" title="Close"></button>
+            <span className="h-3 w-3 rounded-full bg-amber-500/80"></span>
+            <span className="h-3 w-3 rounded-full bg-emerald-500/80"></span>
+            <span className="text-[#22D3EE] font-medium text-[11px] ml-2">rohan@developer-terminal:~</span>
           </div>
-          <button onClick={onClose} className="text-slate-400 hover:text-white font-bold text-sm cursor-pointer">✕</button>
+          <button onClick={onClose} className="text-[#94A3B8] hover:text-[#F8FAFC] font-bold text-sm cursor-pointer">✕</button>
         </div>
 
         {/* Output Logs */}
-        <div ref={outputRef} className="p-4 h-84 overflow-y-auto space-y-2 text-slate-300 select-text">
+        <div ref={outputRef} className="p-4 h-84 overflow-y-auto space-y-2 text-[#CBD5E1] bg-[#0B1120] select-text">
           {history.map((item, i) => (
             <div key={i}>
-              {item.type === 'user' && <p className="text-white font-bold"><span className="text-emerald-400">&gt;</span> {item.text.replace('> ', '')}</p>}
-              {item.type === 'system' && <p className="text-emerald-400">{item.text}</p>}
-              {item.type === 'output' && <pre className="whitespace-pre-wrap font-mono text-slate-300 ml-2">{item.text}</pre>}
+              {item.type === 'user' && <p className="text-[#F8FAFC] font-bold"><span className="text-[#3B82F6]">&gt;</span> {item.text.replace('> ', '')}</p>}
+              {item.type === 'system' && <p className="text-[#22D3EE]">{item.text}</p>}
+              {item.type === 'output' && <pre className="whitespace-pre-wrap font-mono text-[#CBD5E1] ml-2">{item.text}</pre>}
               {item.type === 'success' && <pre className="whitespace-pre-wrap font-mono text-emerald-400 font-bold ml-2">{item.text}</pre>}
               {item.type === 'error' && <p className="text-red-400 ml-2">{item.text}</p>}
             </div>
@@ -318,8 +318,8 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
         </div>
 
         {/* Form Input */}
-        <form onSubmit={handleCommand} className="p-3 bg-black/90 border-t border-white/10 flex items-center gap-2">
-          <span className="text-emerald-400 font-bold">&gt;</span>
+        <form onSubmit={handleCommand} className="p-3 bg-[#111C32] border-t border-[#263449] flex items-center gap-2">
+          <span className="text-[#3B82F6] font-bold">&gt;</span>
           <input 
             ref={inputRef}
             type="text" 
@@ -327,7 +327,7 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
             value={inputVal} 
             onChange={(e) => setInputVal(e.target.value)} 
             placeholder="type a command (e.g. help, skills, projects, exp, contact)..." 
-            className="w-full bg-transparent text-emerald-300 focus:outline-none placeholder-slate-600 font-mono text-xs"
+            className="w-full bg-transparent text-[#F8FAFC] focus:outline-none placeholder-[#94A3B8]/60 font-mono text-xs"
           />
         </form>
 

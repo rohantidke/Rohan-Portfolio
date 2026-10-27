@@ -285,39 +285,39 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
   const current = data[type] || data.credential;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/85 backdrop-blur-md">
-      <div className="rounded-3xl border border-sky-500/40 bg-[#0f1420] text-slate-100 max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-[#0B1120]/80 backdrop-blur-sm">
+      <div className="rounded-2xl border border-[#263449] bg-[#111C32] text-[#CBD5E1] max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
         
         {/* Modal Header */}
-        <div className="p-5 sm:p-6 border-b border-white/10 flex items-start justify-between gap-4 bg-slate-900/60">
+        <div className="p-5 sm:p-6 border-b border-[#263449] flex items-start justify-between gap-4 bg-[#0F172A]">
           <div className="space-y-1">
-            <span className="text-[11px] font-mono text-sky-400 font-bold uppercase tracking-widest">
+            <span className="text-[11px] font-mono text-[#3B82F6] font-bold uppercase tracking-widest">
               SYSTEM ARCHITECTURE & CASE STUDY
             </span>
-            <h3 className="text-xl sm:text-2xl font-bold text-white">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#F8FAFC]">
               {current.title}
             </h3>
-            <p className="text-xs font-mono text-slate-300">
+            <p className="text-xs font-mono text-[#94A3B8]">
               {current.stack}
             </p>
           </div>
 
           <button
             onClick={onClose}
-            className="rounded-full bg-white/10 p-2 text-slate-400 hover:text-white hover:bg-white/20 transition-colors"
+            className="rounded-full bg-[#111C32] border border-[#263449] p-2 text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6] transition-colors"
           >
             ✕
           </button>
         </div>
 
         {/* Tab Controls */}
-        <div className="flex items-center gap-2 px-6 pt-4 border-b border-white/10 bg-black/30 font-mono text-xs">
+        <div className="flex items-center gap-2 px-6 pt-4 border-b border-[#263449] bg-[#0B1120]/40 font-mono text-xs">
           <button
             onClick={() => setActiveTab('architecture')}
             className={`pb-3 px-2 border-b-2 font-semibold transition-all cursor-pointer ${
               activeTab === 'architecture'
-                ? 'border-sky-400 text-sky-300'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-[#3B82F6] text-[#3B82F6]'
+                : 'border-transparent text-[#94A3B8] hover:text-[#CBD5E1]'
             }`}
           >
             📐 Architecture Diagram
@@ -327,8 +327,8 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
             onClick={() => setActiveTab('layers')}
             className={`pb-3 px-2 border-b-2 font-semibold transition-all cursor-pointer ${
               activeTab === 'layers'
-                ? 'border-sky-400 text-sky-300'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-[#3B82F6] text-[#3B82F6]'
+                : 'border-transparent text-[#94A3B8] hover:text-[#CBD5E1]'
             }`}
           >
             ⚙️ Component Layers
@@ -338,8 +338,8 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
             onClick={() => setActiveTab('tradeoffs')}
             className={`pb-3 px-2 border-b-2 font-semibold transition-all cursor-pointer ${
               activeTab === 'tradeoffs'
-                ? 'border-sky-400 text-sky-300'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-[#3B82F6] text-[#3B82F6]'
+                : 'border-transparent text-[#94A3B8] hover:text-[#CBD5E1]'
             }`}
           >
             ⚖️ Trade-offs & Decisions
@@ -347,24 +347,24 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-5 sm:p-6 overflow-y-auto space-y-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+        <div className="p-5 sm:p-6 overflow-y-auto space-y-5 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed font-sans">
           
           {/* Problem Statement Box */}
-          <div className="rounded-2xl border border-white/10 bg-black/40 p-4 space-y-1">
-            <span className="font-mono text-xs text-amber-400 font-semibold uppercase tracking-wider">
+          <div className="rounded-xl border border-[#263449] bg-[#0B1120] p-4 space-y-1">
+            <span className="font-mono text-xs text-[#22D3EE] font-semibold uppercase tracking-wider">
               Problem & Engineering Objective:
             </span>
-            <p className="text-slate-300 text-xs sm:text-sm">
+            <p className="text-[#CBD5E1] text-xs sm:text-sm">
               {current.problem}
             </p>
           </div>
 
           {activeTab === 'architecture' && (
             <div className="space-y-3">
-              <span className="font-mono text-xs text-sky-400 font-semibold uppercase tracking-wider">
+              <span className="font-mono text-xs text-[#3B82F6] font-semibold uppercase tracking-wider">
                 System Topology & Service Flow:
               </span>
-              <pre className="p-4 rounded-2xl bg-black border border-white/10 font-mono text-[10px] sm:text-xs text-sky-300 overflow-x-auto leading-tight shadow-inner">
+              <pre className="p-4 rounded-xl bg-[#0B1120] border border-[#263449] font-mono text-[10px] sm:text-xs text-[#22D3EE] overflow-x-auto leading-tight shadow-inner">
                 {current.diagram}
               </pre>
             </div>
@@ -372,14 +372,14 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
 
           {activeTab === 'layers' && (
             <div className="space-y-3">
-              <span className="font-mono text-xs text-sky-400 font-semibold uppercase tracking-wider">
+              <span className="font-mono text-xs text-[#3B82F6] font-semibold uppercase tracking-wider">
                 Detailed Architectural Components:
               </span>
               <div className="space-y-3">
                 {current.architecture.map((item, idx) => (
-                  <div key={idx} className="rounded-xl border border-white/10 bg-slate-900/60 p-3.5 space-y-1">
-                    <h4 className="font-mono text-xs font-bold text-white">{item.layer}</h4>
-                    <p className="text-xs text-slate-300 leading-relaxed">{item.details}</p>
+                  <div key={idx} className="rounded-xl border border-[#263449] bg-[#0F172A] p-3.5 space-y-1">
+                    <h4 className="font-mono text-xs font-bold text-[#F8FAFC]">{item.layer}</h4>
+                    <p className="text-xs text-[#CBD5E1] leading-relaxed">{item.details}</p>
                   </div>
                 ))}
               </div>
@@ -388,16 +388,16 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
 
           {activeTab === 'tradeoffs' && (
             <div className="space-y-3">
-              <span className="font-mono text-xs text-sky-400 font-semibold uppercase tracking-wider">
+              <span className="font-mono text-xs text-[#3B82F6] font-semibold uppercase tracking-wider">
                 Engineering Trade-offs & Design Choices:
               </span>
               <div className="space-y-3">
                 {current.tradeoffs.map((item, idx) => (
-                  <div key={idx} className="rounded-xl border border-white/10 bg-slate-900/60 p-3.5 space-y-1">
-                    <h4 className="font-mono text-xs font-bold text-white flex items-center gap-1.5">
+                  <div key={idx} className="rounded-xl border border-[#263449] bg-[#0F172A] p-3.5 space-y-1">
+                    <h4 className="font-mono text-xs font-bold text-[#F8FAFC] flex items-center gap-1.5">
                       <span>✓</span> {item.title}
                     </h4>
-                    <p className="text-xs text-slate-300 leading-relaxed">{item.reason}</p>
+                    <p className="text-xs text-[#CBD5E1] leading-relaxed">{item.reason}</p>
                   </div>
                 ))}
               </div>
@@ -407,13 +407,13 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 sm:p-5 border-t border-white/10 bg-slate-900/60 flex items-center justify-between">
-          <span className="font-mono text-[11px] text-slate-400">
+        <div className="p-4 sm:p-5 border-t border-[#263449] bg-[#0F172A] flex items-center justify-between">
+          <span className="font-mono text-[11px] text-[#94A3B8]">
             Engineered by Rohan Tidke · Java Backend & Distributed Systems
           </span>
           <button
             onClick={onClose}
-            className="rounded-full bg-sky-500 px-5 py-2 text-xs font-mono font-bold text-slate-950 hover:bg-sky-400 transition-colors cursor-pointer"
+            className="rounded-full bg-[#3B82F6] px-5 py-2 text-xs font-mono font-bold text-[#F8FAFC] hover:bg-blue-600 transition-colors cursor-pointer"
           >
             Close Overview
           </button>

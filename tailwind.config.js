@@ -8,12 +8,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0b0f17',
-        card: '#121826',
+        'portfolio-bg': '#0B1120',
+        'portfolio-alt': '#0F172A',
+        'portfolio-card': '#111C32',
+        'portfolio-border': '#263449',
+        'portfolio-blue': '#3B82F6',
+        'portfolio-cyan': '#22D3EE',
+        'portfolio-text': '#F8FAFC',
+        'portfolio-body': '#CBD5E1',
+        'portfolio-muted': '#94A3B8',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['Fira Code', 'monospace'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['Fira Code', 'JetBrains Mono', 'monospace'],
       },
     },
   },

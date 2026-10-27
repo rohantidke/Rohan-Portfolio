@@ -189,44 +189,39 @@ function GitHubLiveHeatmap({ onExpand }) {
   // Color brightness scale based on contribution count
   const getTileStyle = (count) => {
     if (count === 0) {
-      // Pure dark black background for 0 contributions
-      return "bg-[#161b22] border-[#21262d]";
+      return "bg-[#111C32] border-[#263449]";
     } else if (count >= 8) {
-      // Level 4: Bright neon green with glowing shadow
-      return "bg-[#39d353] border-[#39d353] shadow-[0_0_8px_#39d353]";
+      return "bg-[#39d353] border-[#39d353]";
     } else if (count >= 5) {
-      // Level 3: Vibrant green
-      return "bg-[#26a641] border-[#26a641] shadow-[0_0_5px_rgba(38,166,65,0.7)]";
+      return "bg-[#26a641] border-[#26a641]";
     } else if (count >= 3) {
-      // Level 2: Medium green
       return "bg-[#006d32] border-[#006d32]";
     } else {
-      // Level 1: Dark green
       return "bg-[#0e4429] border-[#0e4429]";
     }
   };
 
   return (
-    <div className="rounded-2xl border border-white/15 bg-black p-4 sm:p-5 space-y-4 shadow-2xl">
+    <div className="rounded-xl border border-[#263449] bg-[#0B1120] p-4 sm:p-5 space-y-4 shadow-sm">
       {/* Top summary stats bar */}
-      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-white border-b border-white/10 pb-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#CBD5E1] border-b border-[#263449] pb-3">
         <div className="flex items-center gap-1.5">
-          <span className="text-white font-bold text-sm sm:text-base flex items-center gap-2">
+          <span className="text-[#F8FAFC] font-bold text-sm sm:text-base flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             {totalContribs}+ contributions in the past one year
           </span>
-          <span className="text-slate-500 text-xs cursor-help" title="Live synchronized from official GitHub Profile (@rohantidke)">ⓘ</span>
+          <span className="text-[#94A3B8] text-xs cursor-help" title="Live synchronized from official GitHub Profile (@rohantidke)">ⓘ</span>
         </div>
         <div className="flex items-center gap-4 text-xs font-mono">
           <span>Total active days: <strong className="text-emerald-400 font-bold">{activeDays}</strong></span>
-          <span>Max streak: <strong className="text-cyan-400 font-bold">{maxStreak} days</strong></span>
+          <span>Max streak: <strong className="text-[#22D3EE] font-bold">{maxStreak} days</strong></span>
         </div>
       </div>
 
       {/* Heatmap Grid Area */}
       <div className="relative overflow-x-auto pb-1 select-none">
         {/* Month labels */}
-        <div className="flex text-[10px] font-mono text-slate-400 mb-2 pl-6 min-w-[670px] relative h-4">
+        <div className="flex text-[10px] font-mono text-[#94A3B8] mb-2 pl-6 min-w-[670px] relative h-4">
           {monthHeaders.map((m, idx) => (
             <span
               key={idx}
@@ -241,7 +236,7 @@ function GitHubLiveHeatmap({ onExpand }) {
         {/* 52-week grid columns */}
         <div className="flex items-start gap-1 min-w-[670px]">
           {/* Day of week labels */}
-          <div className="flex flex-col justify-between text-[9px] font-mono text-slate-500 h-[92px] pr-2 py-0.5 select-none">
+          <div className="flex flex-col justify-between text-[9px] font-mono text-[#94A3B8] h-[92px] pr-2 py-0.5 select-none">
             <span>Mon</span>
             <span>Wed</span>
             <span>Fri</span>
@@ -270,7 +265,7 @@ function GitHubLiveHeatmap({ onExpand }) {
         </div>
 
         {/* Dynamic Tooltip & Legend footer */}
-        <div className="mt-3.5 flex items-center justify-between text-[11px] font-mono border-t border-white/10 pt-3">
+        <div className="mt-3.5 flex items-center justify-between text-[11px] font-mono border-t border-[#263449] pt-3">
           <div className="text-emerald-400 font-semibold min-h-[1.25rem] flex items-center gap-2">
             {hoveredDay ? (
               <span className="flex items-center gap-1.5 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/30">
@@ -278,17 +273,17 @@ function GitHubLiveHeatmap({ onExpand }) {
                 <strong>{hoveredDay.count} contribution{hoveredDay.count !== 1 ? 's' : ''}</strong> on {hoveredDay.formattedDate}
               </span>
             ) : (
-              <span className="text-slate-400 text-xs">Hover over any tile for exact contribution details</span>
+              <span className="text-[#94A3B8] text-xs">Hover over any tile for exact contribution details</span>
             )}
           </div>
 
-          <div className="flex items-center gap-1.5 text-[10px] text-slate-300 select-none">
+          <div className="flex items-center gap-1.5 text-[10px] text-[#94A3B8] select-none">
             <span>Less</span>
-            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#161b22] border border-[#21262d]" title="0 contributions"></span>
+            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#111C32] border border-[#263449]" title="0 contributions"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-[#0e4429] border border-[#0e4429]" title="1-2 contributions"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-[#006d32] border border-[#006d32]" title="3-4 contributions"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-[#26a641] border border-[#26a641]" title="5-7 contributions"></span>
-            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#39d353] border border-[#39d353] shadow-[0_0_5px_#39d353]" title="8+ contributions"></span>
+            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#39d353] border border-[#39d353]" title="8+ contributions"></span>
             <span>More</span>
           </div>
         </div>
@@ -339,20 +334,20 @@ export default function GitHubTelemetry() {
   }, []);
 
   return (
-    <section id="github" className="px-5 py-14 md:px-8 md:py-20 border-t border-white/5 bg-black">
+    <section id="github" className="px-5 py-14 md:px-8 md:py-20 border-t border-[#263449] bg-[#0B1120]">
       <div className="mx-auto w-full max-w-6xl space-y-10">
         
         {/* Header Title */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
-            <span className="font-mono text-xs text-white font-bold uppercase tracking-widest flex items-center gap-2">
+            <span className="font-mono text-xs text-[#22D3EE] font-bold uppercase tracking-widest flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
               Live GitHub Telemetry
             </span>
-            <h2 className="text-3xl font-extrabold text-white tracking-tight mt-1">
+            <h2 className="text-3xl font-bold text-[#F8FAFC] tracking-tight mt-1">
               GitHub Metrics & Code Analytics
             </h2>
-            <p className="mt-1 text-sm text-white">
+            <p className="mt-1 text-sm text-[#CBD5E1]">
               Real-time activity telemetry and statistics for @{profile.login}.
             </p>
           </div>
@@ -361,7 +356,7 @@ export default function GitHubTelemetry() {
             href={profile.html_url || 'https://github.com/rohantidke'}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-mono font-bold text-white hover:bg-white/20 transition-all shrink-0"
+            className="inline-flex items-center gap-2 rounded-full border border-[#263449] bg-[#111C32] px-5 py-2 text-xs font-mono font-medium text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-[#3B82F6] transition-colors shrink-0"
           >
             <span>🐙 Follow @{profile.login} on GitHub ↗</span>
           </a>
@@ -371,67 +366,67 @@ export default function GitHubTelemetry() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           
           {/* Profile Card */}
-          <div className="glass-card rounded-2xl p-5 space-y-3 flex items-center gap-4 border-white/15">
+          <div className="rounded-2xl p-5 space-y-3 flex items-center gap-4 bg-[#111C32] border border-[#263449] shadow-sm">
             <img
               src={profile.avatar_url || 'https://avatars.githubusercontent.com/u/242967545?v=4'}
               alt={profile.login}
-              className="h-14 w-14 rounded-2xl border border-white/20 object-cover shrink-0"
+              className="h-14 w-14 rounded-2xl border border-[#263449] object-cover shrink-0"
             />
             <div className="min-w-0">
-              <p className="text-xs font-mono text-white">GitHub Account</p>
-              <h3 className="text-base font-bold text-white truncate">@{profile.login}</h3>
-              <p className="text-[11px] text-white font-mono">Member since {new Date(profile.created_at || '2025-11-09').getFullYear()}</p>
+              <p className="text-xs font-mono text-[#94A3B8]">GitHub Account</p>
+              <h3 className="text-base font-bold text-[#F8FAFC] truncate">@{profile.login}</h3>
+              <p className="text-[11px] text-[#94A3B8] font-mono">Member since {new Date(profile.created_at || '2025-11-09').getFullYear()}</p>
             </div>
           </div>
 
           {/* Repos Count */}
-          <div className="glass-card rounded-2xl p-5 space-y-1 border-white/15">
-            <div className="flex items-center justify-between text-xs font-mono text-white">
+          <div className="rounded-2xl p-5 space-y-1 bg-[#111C32] border border-[#263449] shadow-sm">
+            <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8]">
               <span>PUBLIC REPOSITORIES</span>
               <span>📁</span>
             </div>
-            <p className="text-3xl font-extrabold text-white font-mono">{profile.public_repos || 3}</p>
-            <p className="text-[11px] text-white">Open-source code & microservices</p>
+            <p className="text-3xl font-extrabold text-[#F8FAFC] font-mono">{profile.public_repos || 3}</p>
+            <p className="text-[11px] text-[#94A3B8]">Open-source code & microservices</p>
           </div>
 
           {/* Followers / Network */}
-          <div className="glass-card rounded-2xl p-5 space-y-1 border-white/15">
-            <div className="flex items-center justify-between text-xs font-mono text-white">
+          <div className="rounded-2xl p-5 space-y-1 bg-[#111C32] border border-[#263449] shadow-sm">
+            <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8]">
               <span>DEVELOPER NETWORK</span>
               <span>🌐</span>
             </div>
-            <p className="text-3xl font-extrabold text-white font-mono">{profile.followers || 0} <span className="text-xs font-normal text-white">followers</span></p>
-            <p className="text-[11px] text-white">Collaborating on Java & Python backend</p>
+            <p className="text-3xl font-extrabold text-[#F8FAFC] font-mono">{profile.followers || 0} <span className="text-xs font-normal text-[#94A3B8]">followers</span></p>
+            <p className="text-[11px] text-[#94A3B8]">Collaborating on Java & Python backend</p>
           </div>
 
           {/* Primary Language */}
-          <div className="glass-card rounded-2xl p-5 space-y-1 border-white/15">
-            <div className="flex items-center justify-between text-xs font-mono text-white">
+          <div className="rounded-2xl p-5 space-y-1 bg-[#111C32] border border-[#263449] shadow-sm">
+            <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8]">
               <span>PRIMARY STACK</span>
               <span>⚡</span>
             </div>
-            <p className="text-2xl font-bold text-white font-mono">Java 17+ / Spring</p>
-            <p className="text-[11px] text-white">Spring Boot 3, JPA, FastAPI & Docker</p>
+            <p className="text-2xl font-bold text-[#F8FAFC] font-mono">Java 17+ / Spring</p>
+            <p className="text-[11px] text-[#94A3B8]">Spring Boot 3, JPA, FastAPI & Docker</p>
           </div>
 
         </div>
 
-        {/* Verified GitHub Activity Heatmap Card (OLED Black Theme matching LeetCode) */}
-        <div className="rounded-3xl bg-black border border-white/10 p-6 space-y-5 shadow-2xl flex flex-col justify-between">
+        {/* Verified GitHub Activity Heatmap Card */}
+        <div className="rounded-2xl bg-[#111C32] border border-[#263449] p-6 space-y-5 shadow-sm flex flex-col justify-between">
           
-          <div className="flex flex-wrap items-center justify-between border-b border-white/10 pb-4 gap-2">
+          <div className="flex flex-wrap items-center justify-between border-b border-[#263449] pb-4 gap-2">
             <div>
-              <h3 className="text-base font-bold text-white font-mono flex items-center gap-2">
+              <h3 className="text-base font-bold text-[#F8FAFC] font-mono flex items-center gap-2">
                 <span>🟩 Verified GitHub Activity Heatmap</span>
                 <span className="text-xs font-normal text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30 font-mono">
                   Active Contributions
                 </span>
               </h3>
-              <p className="text-xs text-white mt-0.5">Telemetry automatically updating live every 15s · {lastSyncTime}</p>
+              <p className="text-xs text-[#94A3B8] mt-0.5">Telemetry automatically updating live every 15s · {lastSyncTime}</p>
             </div>
             <button
               onClick={() => setIsHeatmapExpanded(true)}
-              className="text-xs font-mono text-emerald-400 hover:text-emerald-300 font-bold border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 rounded-full transition-all cursor-pointer shadow-md"
+              className="text-xs font-mono text-[#3B82F6] hover:text-[#22D3EE] font-medium border border-[#263449] bg-[#0B1120] px-3.5 py-1.5 rounded-full transition-colors cursor-pointer"
             >
               🔍 Expand Heatmap
             </button>
@@ -447,22 +442,22 @@ export default function GitHubTelemetry() {
       {/* GitHub Heatmap Lightbox Modal */}
       {isHeatmapExpanded && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl cursor-pointer"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B1120]/80 backdrop-blur-md cursor-pointer"
           onClick={() => setIsHeatmapExpanded(false)}
         >
-          <div className="relative max-w-4xl w-full rounded-2xl bg-black border border-emerald-500/50 p-6 space-y-4 shadow-2xl" onClick={e => e.stopPropagation()}>
-            <div className="flex justify-between items-center border-b border-white/10 pb-3 font-mono">
-              <span className="text-sm font-bold text-emerald-400">🟩 Rohan Tidke - Official GitHub Contribution Heatmap</span>
-              <button onClick={() => setIsHeatmapExpanded(false)} className="text-white hover:text-emerald-400 text-lg font-bold">✕</button>
+          <div className="relative max-w-4xl w-full rounded-2xl bg-[#111C32] border border-[#263449] p-6 space-y-4 shadow-2xl" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center border-b border-[#263449] pb-3 font-mono">
+              <span className="text-sm font-bold text-[#F8FAFC]">🟩 Rohan Tidke - Official GitHub Contribution Heatmap</span>
+              <button onClick={() => setIsHeatmapExpanded(false)} className="text-[#94A3B8] hover:text-[#F8FAFC] text-lg font-bold">✕</button>
             </div>
             
-            <div className="p-2 bg-black rounded-xl border border-white/10">
+            <div className="p-2 bg-[#0B1120] rounded-xl border border-[#263449]">
               <GitHubLiveHeatmap />
             </div>
 
-            <div className="flex justify-between text-xs font-mono text-white pt-2">
+            <div className="flex justify-between text-xs font-mono text-[#94A3B8] pt-2">
               <span>Live Auto-Syncing Every 15s · GitHub Profile: @rohantidke</span>
-              <a href="https://github.com/rohantidke" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline font-bold">
+              <a href="https://github.com/rohantidke" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#22D3EE] font-medium">
                 View @rohantidke on GitHub ↗
               </a>
             </div>
