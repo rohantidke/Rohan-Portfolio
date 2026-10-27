@@ -61,7 +61,7 @@ export default function Header({ onOpenCLI, onOpenPalette, onOpenResume, showToa
                 className={`rounded-full px-3 py-1 text-xs font-mono transition-all ${
                   isActive 
                     ? 'bg-[#3B82F6]/15 text-[#3B82F6] font-semibold border border-[#3B82F6]/30' 
-                    : 'text-[#E5E7EB] hover:text-[#FFFFFF] hover:bg-[#101010]'
+                    : 'text-[#D4D4D8] hover:text-[#FFFFFF] hover:bg-[#101010]'
                 }`}
               >
                 {link.label}
@@ -76,7 +76,7 @@ export default function Header({ onOpenCLI, onOpenPalette, onOpenResume, showToa
           <button 
             onClick={onOpenCLI} 
             type="button" 
-            className="flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-3 py-1 text-xs text-[#22D3EE] hover:border-[#3B82F6] transition-all font-mono"
+            className="flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-3 py-1 text-xs text-[#22D3EE] hover:border-[#3F3F46] hover:text-[#60A5FA] transition-all font-mono"
             title="Open Interactive Terminal (~)"
           >
             <span className="font-bold">&gt;_</span>
@@ -88,7 +88,7 @@ export default function Header({ onOpenCLI, onOpenPalette, onOpenResume, showToa
           <button 
             onClick={onOpenPalette} 
             type="button" 
-            className="flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-3 py-1 text-xs text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors font-mono"
+            className="flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-3 py-1 text-xs text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors font-mono"
             title="Search Commands (⌘K or Ctrl+K)"
           >
             <svg className="size-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +111,7 @@ export default function Header({ onOpenCLI, onOpenPalette, onOpenResume, showToa
         {/* Mobile Hamburger Button */}
         <button 
           onClick={() => setMobileOpen(!mobileOpen)} 
-          className="flex lg:hidden rounded-full p-2 text-[#E5E7EB] hover:bg-[#101010] transition-colors"
+          className="flex lg:hidden rounded-full p-2 text-[#D4D4D8] hover:bg-[#101010] transition-colors"
           aria-label="Toggle navigation menu"
         >
           <svg className="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@ export default function Header({ onOpenCLI, onOpenPalette, onOpenResume, showToa
                 className={`block px-3 py-2 rounded-xl text-xs font-mono transition-colors ${
                   activeSection === link.id
                     ? 'bg-[#3B82F6]/15 text-[#3B82F6] font-bold border border-[#3B82F6]/30'
-                    : 'text-[#E5E7EB] hover:bg-[#101010] hover:text-[#FFFFFF]'
+                    : 'text-[#D4D4D8] hover:bg-[#101010] hover:text-[#FFFFFF]'
                 }`}
               >
                 {link.label}
@@ -148,7 +148,7 @@ export default function Header({ onOpenCLI, onOpenPalette, onOpenResume, showToa
           <div className="pt-2 flex flex-col gap-2 font-mono">
             <button 
               onClick={() => { onOpenResume(); setMobileOpen(false); }} 
-              className="w-full rounded-full bg-[#3B82F6] py-2.5 text-xs font-bold text-[#FFFFFF] shadow-sm cursor-pointer text-center hover:bg-[#2563EB] transition-colors"
+              className="w-full rounded-full bg-[#3B82F6] py-2.5 text-xs font-bold text-[#FFFFFF] shadow-sm cursor-pointer text-center hover:bg-[#60A5FA] transition-colors"
             >
               📄 View Resume PDF
             </button>
@@ -156,7 +156,7 @@ export default function Header({ onOpenCLI, onOpenPalette, onOpenResume, showToa
               href="/Rohan_Tidke_Resume.pdf" 
               download="Rohan_Tidke_Resume.pdf"
               onClick={() => setMobileOpen(false)}
-              className="w-full rounded-full border border-[#262626] bg-[#101010] py-2 text-xs font-medium text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] text-center transition-colors"
+              className="w-full rounded-full border border-[#262626] bg-[#101010] py-2 text-xs font-medium text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] text-center transition-colors"
             >
               ⬇ Download Resume PDF
             </a>

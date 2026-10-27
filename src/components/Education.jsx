@@ -38,7 +38,7 @@ export default function Education() {
             Academic & Professional Qualifications
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#FFFFFF] tracking-tight mt-1">Education & Certifications</h2>
-          <p className="mt-1 text-sm text-[#E5E7EB]">Verified academic background, university degrees, and specialized technical training.</p>
+          <p className="mt-1 text-sm text-[#D4D4D8]">Verified academic background, university degrees, and specialized technical training.</p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
@@ -58,10 +58,10 @@ export default function Education() {
                     Expected 2027
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-[#E5E7EB] font-medium">Bachelor of Engineering (B.E.) in Computer Engineering</p>
+                <p className="text-xs sm:text-sm text-[#D4D4D8] font-medium">Bachelor of Engineering (B.E.) in Computer Engineering</p>
                 <div className="flex items-center gap-2 font-mono text-xs pt-1">
                   <span className="text-[#A1A1AA]">Cumulative GPA:</span>
-                  <span className="text-[#22D3EE] font-semibold bg-[#161616] px-2.5 py-0.5 rounded border border-[#262626]">8.5 CGPA</span>
+                  <span className="text-[#22D3EE] font-semibold bg-[#171717] px-2.5 py-0.5 rounded border border-[#262626]">8.5 CGPA</span>
                 </div>
               </div>
 
@@ -70,10 +70,10 @@ export default function Education() {
                   <h4 className="text-base font-bold text-[#FFFFFF]">Yogeshwari Polytechnic, Ambajogai</h4>
                   <span className="text-xs font-mono text-[#A1A1AA]">2021 – 2024</span>
                 </div>
-                <p className="text-xs sm:text-sm text-[#E5E7EB] font-medium">Diploma in Computer Engineering</p>
+                <p className="text-xs sm:text-sm text-[#D4D4D8] font-medium">Diploma in Computer Engineering</p>
                 <div className="flex items-center gap-2 font-mono text-xs pt-1">
                   <span className="text-[#A1A1AA]">Score:</span>
-                  <span className="text-emerald-400 font-semibold bg-[#161616] px-2.5 py-0.5 rounded border border-[#262626]">88.46% (Distinction)</span>
+                  <span className="text-emerald-400 font-semibold bg-[#171717] px-2.5 py-0.5 rounded border border-[#262626]">88.46% (Distinction)</span>
                 </div>
               </div>
 
@@ -82,10 +82,10 @@ export default function Education() {
                   <h4 className="text-base font-bold text-[#FFFFFF]">Shri Yogeshwari Nutan Vidyalaya, Ambajogai</h4>
                   <span className="text-xs font-mono text-[#A1A1AA]">2021</span>
                 </div>
-                <p className="text-xs sm:text-sm text-[#E5E7EB] font-medium">Secondary School Certificate (SSC)</p>
+                <p className="text-xs sm:text-sm text-[#D4D4D8] font-medium">Secondary School Certificate (SSC)</p>
                 <div className="flex items-center gap-2 font-mono text-xs pt-1">
                   <span className="text-[#A1A1AA]">Score:</span>
-                  <span className="text-emerald-400 font-semibold bg-[#161616] px-2.5 py-0.5 rounded border border-[#262626]">95.60% (Distinction)</span>
+                  <span className="text-emerald-400 font-semibold bg-[#171717] px-2.5 py-0.5 rounded border border-[#262626]">95.60% (Distinction)</span>
                 </div>
               </div>
 
@@ -100,18 +100,18 @@ export default function Education() {
 
             <div className="space-y-3">
               {certs.map((c, idx) => (
-                <div key={idx} className="rounded-2xl border border-[#262626] bg-[#101010] p-4 sm:p-5 flex items-center justify-between hover:border-[#3B82F6] transition-colors shadow-sm">
+                <div key={idx} className="rounded-2xl border border-[#262626] bg-[#101010] p-4 sm:p-5 flex items-center justify-between hover:border-[#3F3F46] transition-colors shadow-sm">
                   <div className="flex items-center gap-3.5">
                     <div className={`h-11 w-11 rounded-xl border flex items-center justify-center font-bold text-xs font-mono shrink-0 ${c.color}`}>
                       {c.badge}
                     </div>
                     <div>
                       <h4 className="text-sm font-bold text-[#FFFFFF] leading-tight">{c.title}</h4>
-                      <p className="text-xs text-[#E5E7EB] mt-0.5">{c.issuer}</p>
+                      <p className="text-xs text-[#D4D4D8] mt-0.5">{c.issuer}</p>
                       <p className="text-[11px] text-[#A1A1AA] font-mono mt-0.5">{c.id}</p>
                     </div>
                   </div>
-                  <span className="rounded-full bg-[#161616] border border-[#262626] px-3 py-1 text-[11px] text-[#E5E7EB] font-mono shrink-0 ml-3">
+                  <span className="rounded-full bg-[#171717] border border-[#262626] px-3 py-1 text-[11px] text-[#D4D4D8] font-mono shrink-0 ml-3">
                     {c.date}
                   </span>
                 </div>

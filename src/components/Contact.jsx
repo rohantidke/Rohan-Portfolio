@@ -66,7 +66,7 @@ export default function Contact({ showToast }) {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#FFFFFF] tracking-tight">
             Have an opportunity or interesting project? Let's connect.
           </h2>
-          <p className="text-sm text-[#E5E7EB]">
+          <p className="text-sm text-[#D4D4D8]">
             I am available for Java Backend Developer and Software Engineering roles. Feel free to reach out directly via email, LinkedIn, or the message composer below.
           </p>
         </div>
@@ -75,8 +75,8 @@ export default function Contact({ showToast }) {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
           
           {/* Card 1: Email */}
-          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3B82F6] transition-colors">
-            <div className="h-11 w-11 rounded-full bg-[#161616] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-lg">
+          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3F3F46] transition-colors">
+            <div className="h-11 w-11 rounded-full bg-[#171717] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-lg">
               ✉
             </div>
             <div>
@@ -88,13 +88,13 @@ export default function Contact({ showToast }) {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=rohantidke6086@gmail.com&su=Software%20Engineering%20Opportunity%20-%20Rohan%20Tidke"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-full bg-[#3B82F6] py-2 text-xs font-medium text-[#FFFFFF] hover:bg-[#2563EB] transition-colors shadow-sm"
+                className="block w-full rounded-full bg-[#3B82F6] py-2 text-xs font-medium text-[#FFFFFF] hover:bg-[#60A5FA] transition-colors shadow-sm"
               >
                 Compose in Gmail ↗
               </a>
               <button 
                 onClick={copyEmail} 
-                className="w-full rounded-full bg-[#161616] border border-[#262626] py-1.5 text-[11px] text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors cursor-pointer"
+                className="w-full rounded-full bg-[#171717] border border-[#262626] py-1.5 text-[11px] text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors cursor-pointer"
               >
                 📋 Copy Email
               </button>
@@ -102,8 +102,8 @@ export default function Contact({ showToast }) {
           </div>
 
           {/* Card 2: LinkedIn */}
-          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3B82F6] transition-colors">
-            <div className="h-11 w-11 rounded-full bg-[#161616] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-sm font-mono">
+          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3F3F46] transition-colors">
+            <div className="h-11 w-11 rounded-full bg-[#171717] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-sm font-mono">
               in
             </div>
             <div>
@@ -114,15 +114,15 @@ export default function Contact({ showToast }) {
               href="https://linkedin.com/in/rohan-tidke-31510a26b" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-full rounded-full bg-[#161616] border border-[#262626] py-2 text-xs text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors font-mono font-medium"
+              className="w-full rounded-full bg-[#171717] border border-[#262626] py-2 text-xs text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors font-mono font-medium"
             >
               View Profile ↗
             </a>
           </div>
 
           {/* Card 3: GitHub */}
-          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3B82F6] transition-colors">
-            <div className="h-11 w-11 rounded-full bg-[#161616] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-xs font-mono">
+          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3F3F46] transition-colors">
+            <div className="h-11 w-11 rounded-full bg-[#171717] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-xs font-mono">
               GH
             </div>
             <div>
@@ -133,15 +133,15 @@ export default function Contact({ showToast }) {
               href="https://github.com/rohantidke" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-full rounded-full bg-[#161616] border border-[#262626] py-2 text-xs text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors font-mono font-medium"
+              className="w-full rounded-full bg-[#171717] border border-[#262626] py-2 text-xs text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors font-mono font-medium"
             >
               Explore Repos ↗
             </a>
           </div>
 
           {/* Card 4: Phone / Direct Line */}
-          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3B82F6] transition-colors">
-            <div className="h-11 w-11 rounded-full bg-[#161616] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-lg">
+          <div className="rounded-2xl border border-[#262626] bg-[#101010] p-5 space-y-3 flex flex-col justify-between text-center items-center shadow-sm hover:border-[#3F3F46] transition-colors">
+            <div className="h-11 w-11 rounded-full bg-[#171717] border border-[#262626] flex items-center justify-center text-[#22D3EE] font-bold text-lg">
               📞
             </div>
             <div>
@@ -150,7 +150,7 @@ export default function Contact({ showToast }) {
             </div>
             <a 
               href="tel:+918208391705" 
-              className="w-full rounded-full bg-[#161616] border border-[#262626] py-2 text-xs text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors font-mono font-medium"
+              className="w-full rounded-full bg-[#171717] border border-[#262626] py-2 text-xs text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors font-mono font-medium"
             >
               Call +91-8208391705
             </a>
@@ -190,7 +190,7 @@ export default function Contact({ showToast }) {
                   placeholder="e.g. Alex Morgan" 
                   value={form.name} 
                   onChange={(e) => { setForm({ ...form, name: e.target.value }); setErrorMsg(''); }} 
-                  className="w-full rounded-xl bg-[#161616] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono"
+                  className="w-full rounded-xl bg-[#171717] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono"
                 />
               </div>
 
@@ -201,7 +201,7 @@ export default function Contact({ showToast }) {
                   placeholder="e.g. alex@company.com" 
                   value={form.email} 
                   onChange={(e) => { setForm({ ...form, email: e.target.value }); setErrorMsg(''); }} 
-                  className="w-full rounded-xl bg-[#161616] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono"
+                  className="w-full rounded-xl bg-[#171717] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono"
                 />
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function Contact({ showToast }) {
                 placeholder="e.g. Java Backend Developer Opportunity / Interview Invitation" 
                 value={form.subject} 
                 onChange={(e) => { setForm({ ...form, subject: e.target.value }); setErrorMsg(''); }} 
-                className="w-full rounded-xl bg-[#161616] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono"
+                className="w-full rounded-xl bg-[#171717] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono"
               />
             </div>
 
@@ -224,14 +224,14 @@ export default function Contact({ showToast }) {
                 placeholder="Hi Rohan, we reviewed your portfolio and would like to discuss a Software Engineering role on our backend team..." 
                 value={form.message} 
                 onChange={(e) => { setForm({ ...form, message: e.target.value }); setErrorMsg(''); }} 
-                className="w-full rounded-xl bg-[#161616] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono leading-relaxed"
+                className="w-full rounded-xl bg-[#171717] border border-[#262626] px-3.5 py-2.5 text-xs text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none focus:border-[#3B82F6] font-mono leading-relaxed"
               ></textarea>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
               <button
                 type="submit"
-                className="flex-1 rounded-full bg-[#3B82F6] py-2.5 text-xs font-medium text-[#FFFFFF] hover:bg-[#2563EB] transition-colors shadow-sm font-mono cursor-pointer"
+                className="flex-1 rounded-full bg-[#3B82F6] py-2.5 text-xs font-medium text-[#FFFFFF] hover:bg-[#60A5FA] transition-colors shadow-sm font-mono cursor-pointer"
               >
                 ✉ Compose in Gmail Web
               </button>
@@ -239,7 +239,7 @@ export default function Contact({ showToast }) {
               <button
                 type="button"
                 onClick={handleMailto}
-                className="rounded-full border border-[#262626] bg-[#161616] px-5 py-2.5 text-xs font-medium text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors font-mono cursor-pointer"
+                className="rounded-full border border-[#262626] bg-[#171717] px-5 py-2.5 text-xs font-medium text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors font-mono cursor-pointer"
               >
                 📱 Open Default Mail App
               </button>

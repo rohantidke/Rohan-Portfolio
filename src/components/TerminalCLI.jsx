@@ -305,12 +305,12 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
         </div>
 
         {/* Output Logs */}
-        <div ref={outputRef} className="p-4 h-84 overflow-y-auto space-y-2 text-[#E5E7EB] bg-[#000000] select-text">
+        <div ref={outputRef} className="p-4 h-84 overflow-y-auto space-y-2 text-[#D4D4D8] bg-[#000000] select-text">
           {history.map((item, i) => (
             <div key={i}>
               {item.type === 'user' && <p className="text-[#FFFFFF] font-bold"><span className="text-[#3B82F6]">&gt;</span> {item.text.replace('> ', '')}</p>}
               {item.type === 'system' && <p className="text-[#22D3EE]">{item.text}</p>}
-              {item.type === 'output' && <pre className="whitespace-pre-wrap font-mono text-[#E5E7EB] ml-2">{item.text}</pre>}
+              {item.type === 'output' && <pre className="whitespace-pre-wrap font-mono text-[#D4D4D8] ml-2">{item.text}</pre>}
               {item.type === 'success' && <pre className="whitespace-pre-wrap font-mono text-emerald-400 font-bold ml-2">{item.text}</pre>}
               {item.type === 'error' && <p className="text-red-400 ml-2">{item.text}</p>}
             </div>

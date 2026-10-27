@@ -286,7 +286,7 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-[#000000]/80 backdrop-blur-sm">
-      <div className="rounded-2xl border border-[#262626] bg-[#101010] text-[#E5E7EB] max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+      <div className="rounded-2xl border border-[#262626] bg-[#101010] text-[#D4D4D8] max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
         
         {/* Modal Header */}
         <div className="p-5 sm:p-6 border-b border-[#262626] flex items-start justify-between gap-4 bg-[#080808]">
@@ -304,7 +304,7 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
 
           <button
             onClick={onClose}
-            className="rounded-full bg-[#161616] border border-[#262626] p-2 text-[#A1A1AA] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors"
+            className="rounded-full bg-[#171717] border border-[#262626] p-2 text-[#A1A1AA] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors"
           >
             ✕
           </button>
@@ -347,14 +347,14 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-5 sm:p-6 overflow-y-auto space-y-5 text-xs sm:text-sm text-[#E5E7EB] leading-relaxed font-sans">
+        <div className="p-5 sm:p-6 overflow-y-auto space-y-5 text-xs sm:text-sm text-[#D4D4D8] leading-relaxed font-sans">
           
           {/* Problem Statement Box */}
-          <div className="rounded-xl border border-[#262626] bg-[#161616] p-4 space-y-1">
+          <div className="rounded-xl border border-[#262626] bg-[#171717] p-4 space-y-1">
             <span className="font-mono text-xs text-[#22D3EE] font-semibold uppercase tracking-wider">
               Problem & Engineering Objective:
             </span>
-            <p className="text-[#E5E7EB] text-xs sm:text-sm">
+            <p className="text-[#D4D4D8] text-xs sm:text-sm">
               {current.problem}
             </p>
           </div>
@@ -364,7 +364,7 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
               <span className="font-mono text-xs text-[#3B82F6] font-semibold uppercase tracking-wider">
                 System Topology & Service Flow:
               </span>
-              <pre className="p-4 rounded-xl bg-[#161616] border border-[#262626] font-mono text-[10px] sm:text-xs text-[#22D3EE] overflow-x-auto leading-tight shadow-inner">
+              <pre className="p-4 rounded-xl bg-[#171717] border border-[#262626] font-mono text-[10px] sm:text-xs text-[#22D3EE] overflow-x-auto leading-tight shadow-inner">
                 {current.diagram}
               </pre>
             </div>
@@ -377,9 +377,9 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
               </span>
               <div className="space-y-3">
                 {current.architecture.map((item, idx) => (
-                  <div key={idx} className="rounded-xl border border-[#262626] bg-[#161616] p-3.5 space-y-1">
+                  <div key={idx} className="rounded-xl border border-[#262626] bg-[#171717] p-3.5 space-y-1">
                     <h4 className="font-mono text-xs font-bold text-[#FFFFFF]">{item.layer}</h4>
-                    <p className="text-xs text-[#E5E7EB] leading-relaxed">{item.details}</p>
+                    <p className="text-xs text-[#D4D4D8] leading-relaxed">{item.details}</p>
                   </div>
                 ))}
               </div>
@@ -393,11 +393,11 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
               </span>
               <div className="space-y-3">
                 {current.tradeoffs.map((item, idx) => (
-                  <div key={idx} className="rounded-xl border border-[#262626] bg-[#161616] p-3.5 space-y-1">
+                  <div key={idx} className="rounded-xl border border-[#262626] bg-[#171717] p-3.5 space-y-1">
                     <h4 className="font-mono text-xs font-bold text-[#FFFFFF] flex items-center gap-1.5">
                       <span>✓</span> {item.title}
                     </h4>
-                    <p className="text-xs text-[#E5E7EB] leading-relaxed">{item.reason}</p>
+                    <p className="text-xs text-[#D4D4D8] leading-relaxed">{item.reason}</p>
                   </div>
                 ))}
               </div>
@@ -413,7 +413,7 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
           </span>
           <button
             onClick={onClose}
-            className="rounded-full bg-[#3B82F6] px-5 py-2 text-xs font-mono font-bold text-[#FFFFFF] hover:bg-[#2563EB] transition-colors cursor-pointer"
+            className="rounded-full bg-[#3B82F6] px-5 py-2 text-xs font-mono font-bold text-[#FFFFFF] hover:bg-[#60A5FA] transition-colors cursor-pointer"
           >
             Close Overview
           </button>

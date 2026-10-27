@@ -60,13 +60,13 @@ export default function Experience() {
           {experiences.map((exp, idx) => (
             <article 
               key={idx} 
-              className="rounded-2xl border border-[#262626] bg-[#101010] p-6 sm:p-8 space-y-6 hover:border-[#3B82F6] transition-all shadow-md flex flex-col justify-between"
+              className="rounded-2xl border border-[#262626] bg-[#101010] p-6 sm:p-8 space-y-6 hover:border-[#3F3F46] transition-all shadow-md flex flex-col justify-between"
             >
               <div className="space-y-4">
                 {/* Header Row */}
                 <div className="border-b border-[#262626] pb-4 space-y-2">
                   <div className="flex items-center justify-between flex-wrap gap-2">
-                    <span className="text-xs font-mono font-bold text-[#3B82F6] bg-[#161616] border border-[#262626] px-3 py-1 rounded-full">
+                    <span className="text-xs font-mono font-bold text-[#3B82F6] bg-[#171717] border border-[#262626] px-3 py-1 rounded-full">
                       {exp.badge}
                     </span>
                     <span className="text-xs font-mono text-[#A1A1AA] font-medium">
@@ -79,13 +79,13 @@ export default function Experience() {
                   </h3>
 
                   <div className="flex items-center justify-between flex-wrap text-xs font-mono">
-                    <span className="text-[#E5E7EB] font-semibold">{exp.organization}</span>
+                    <span className="text-[#D4D4D8] font-semibold">{exp.organization}</span>
                     <span className="text-[#A1A1AA] text-[11px]">{exp.certId}</span>
                   </div>
                 </div>
 
                 {/* Bullets */}
-                <ul className="space-y-3 text-xs sm:text-sm text-[#E5E7EB] leading-relaxed">
+                <ul className="space-y-3 text-xs sm:text-sm text-[#D4D4D8] leading-relaxed">
                   {exp.points.map((pt, pIdx) => (
                     <li key={pIdx} className="flex items-start gap-2.5">
                       <span className="text-[#3B82F6] font-bold shrink-0 mt-0.5">▹</span>
@@ -104,7 +104,7 @@ export default function Experience() {
                   {exp.skills.map((skill, sIdx) => (
                     <span 
                       key={sIdx} 
-                      className="rounded-md border border-[#262626] bg-[#161616] px-2.5 py-0.5 text-xs font-mono text-[#E5E7EB]"
+                      className="rounded-md border border-[#262626] bg-[#171717] px-2.5 py-0.5 text-xs font-mono text-[#D4D4D8]"
                     >
                       {skill}
                     </span>

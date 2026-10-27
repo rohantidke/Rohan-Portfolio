@@ -189,7 +189,7 @@ function GitHubLiveHeatmap({ onExpand }) {
   // Color brightness scale based on contribution count
   const getTileStyle = (count) => {
     if (count === 0) {
-      return "bg-[#161616] border-[#262626]";
+      return "bg-[#171717] border-[#262626]";
     } else if (count >= 8) {
       return "bg-[#39d353] border-[#39d353]";
     } else if (count >= 5) {
@@ -202,9 +202,9 @@ function GitHubLiveHeatmap({ onExpand }) {
   };
 
   return (
-    <div className="rounded-xl border border-[#262626] bg-[#161616] p-4 sm:p-5 space-y-4 shadow-sm">
+    <div className="rounded-xl border border-[#262626] bg-[#171717] p-4 sm:p-5 space-y-4 shadow-sm">
       {/* Top summary stats bar */}
-      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#E5E7EB] border-b border-[#262626] pb-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#D4D4D8] border-b border-[#262626] pb-3">
         <div className="flex items-center gap-1.5">
           <span className="text-[#FFFFFF] font-bold text-sm sm:text-base flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -279,7 +279,7 @@ function GitHubLiveHeatmap({ onExpand }) {
 
           <div className="flex items-center gap-1.5 text-[10px] text-[#A1A1AA] select-none">
             <span>Less</span>
-            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#161616] border border-[#262626]" title="0 contributions"></span>
+            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#171717] border border-[#262626]" title="0 contributions"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-[#0e4429] border border-[#0e4429]" title="1-2 contributions"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-[#006d32] border border-[#006d32]" title="3-4 contributions"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-[#26a641] border border-[#26a641]" title="5-7 contributions"></span>
@@ -347,7 +347,7 @@ export default function GitHubTelemetry() {
             <h2 className="text-3xl font-bold text-[#FFFFFF] tracking-tight mt-1">
               GitHub Metrics & Code Analytics
             </h2>
-            <p className="mt-1 text-sm text-[#E5E7EB]">
+            <p className="mt-1 text-sm text-[#D4D4D8]">
               Real-time activity telemetry and statistics for @{profile.login}.
             </p>
           </div>
@@ -356,7 +356,7 @@ export default function GitHubTelemetry() {
             href={profile.html_url || 'https://github.com/rohantidke'}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-[#262626] bg-[#101010] px-5 py-2 text-xs font-mono font-medium text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors shrink-0"
+            className="inline-flex items-center gap-2 rounded-full border border-[#262626] bg-[#101010] px-5 py-2 text-xs font-mono font-medium text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors shrink-0"
           >
             <span>🐙 Follow @{profile.login} on GitHub ↗</span>
           </a>
@@ -426,7 +426,7 @@ export default function GitHubTelemetry() {
             </div>
             <button
               onClick={() => setIsHeatmapExpanded(true)}
-              className="text-xs font-mono text-[#3B82F6] hover:text-[#22D3EE] font-medium border border-[#262626] bg-[#161616] px-3.5 py-1.5 rounded-full transition-colors cursor-pointer"
+              className="text-xs font-mono text-[#3B82F6] hover:text-[#22D3EE] font-medium border border-[#262626] bg-[#171717] px-3.5 py-1.5 rounded-full transition-colors cursor-pointer"
             >
               🔍 Expand Heatmap
             </button>
@@ -451,7 +451,7 @@ export default function GitHubTelemetry() {
               <button onClick={() => setIsHeatmapExpanded(false)} className="text-[#A1A1AA] hover:text-[#FFFFFF] text-lg font-bold">✕</button>
             </div>
             
-            <div className="p-2 bg-[#161616] rounded-xl border border-[#262626]">
+            <div className="p-2 bg-[#171717] rounded-xl border border-[#262626]">
               <GitHubLiveHeatmap />
             </div>
 

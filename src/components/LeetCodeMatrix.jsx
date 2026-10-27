@@ -56,8 +56,8 @@ function LiveSubmissionHeatmap({ calendarMap, totalSubmissions, activeDays, stre
   }, [calendarMap, totalSubmissions]);
 
   return (
-    <div className="rounded-2xl border border-[#262626] bg-[#161616] p-4 sm:p-5 space-y-4 shadow-inner">
-      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#E5E7EB] border-b border-[#262626] pb-3">
+    <div className="rounded-2xl border border-[#262626] bg-[#171717] p-4 sm:p-5 space-y-4 shadow-inner">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#D4D4D8] border-b border-[#262626] pb-3">
         <div className="flex items-center gap-1.5">
           <span className="text-[#FFFFFF] font-bold text-sm sm:text-base">
             {computedSubmissionsSum} submissions in the past one year
@@ -365,7 +365,7 @@ export default function LeetCodeMatrix() {
               href="https://github.com/rohantidke"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2 text-xs font-mono text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2 text-xs font-mono text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-colors"
             >
               <span>GitHub Repos ↗</span>
             </a>
@@ -392,7 +392,7 @@ export default function LeetCodeMatrix() {
               <div className="relative h-32 w-32 flex items-center justify-center">
                 <svg className="h-full w-full -rotate-90" viewBox="0 0 36 36">
                   <path
-                    className="text-[#161616]"
+                    className="text-[#171717]"
                     strokeWidth="3.2"
                     stroke="currentColor"
                     fill="none"
@@ -441,9 +441,9 @@ export default function LeetCodeMatrix() {
               <div className="space-y-1">
                 <div className="flex justify-between">
                   <span className="text-emerald-400 font-bold">Easy</span>
-                  <span className="text-[#E5E7EB]"><strong>{stats.easySolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
+                  <span className="text-[#D4D4D8]"><strong>{stats.easySolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
                 </div>
-                <div className="w-full bg-[#161616] h-2 rounded-full overflow-hidden border border-[#262626]">
+                <div className="w-full bg-[#171717] h-2 rounded-full overflow-hidden border border-[#262626]">
                   <div className="bg-emerald-400 h-full rounded-full transition-all duration-500" style={{ width: `${Math.min((stats.easySolved / 60) * 100, 100)}%` }}></div>
                 </div>
               </div>
@@ -451,9 +451,9 @@ export default function LeetCodeMatrix() {
               <div className="space-y-1">
                 <div className="flex justify-between">
                   <span className="text-amber-400 font-bold">Medium</span>
-                  <span className="text-[#E5E7EB]"><strong>{stats.mediumSolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
+                  <span className="text-[#D4D4D8]"><strong>{stats.mediumSolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
                 </div>
-                <div className="w-full bg-[#161616] h-2 rounded-full overflow-hidden border border-[#262626]">
+                <div className="w-full bg-[#171717] h-2 rounded-full overflow-hidden border border-[#262626]">
                   <div className="bg-amber-400 h-full rounded-full transition-all duration-500" style={{ width: `${Math.min((stats.mediumSolved / 60) * 100, 100)}%` }}></div>
                 </div>
               </div>
@@ -461,9 +461,9 @@ export default function LeetCodeMatrix() {
               <div className="space-y-1">
                 <div className="flex justify-between">
                   <span className="text-rose-400 font-bold">Hard</span>
-                  <span className="text-[#E5E7EB]"><strong>{stats.hardSolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
+                  <span className="text-[#D4D4D8]"><strong>{stats.hardSolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
                 </div>
-                <div className="w-full bg-[#161616] h-2 rounded-full overflow-hidden border border-[#262626]">
+                <div className="w-full bg-[#171717] h-2 rounded-full overflow-hidden border border-[#262626]">
                   <div className="bg-rose-500 h-full rounded-full transition-all duration-500" style={{ width: `${Math.min((stats.hardSolved / 25) * 100, 100)}%` }}></div>
                 </div>
               </div>
@@ -471,7 +471,7 @@ export default function LeetCodeMatrix() {
             </div>
 
             {/* Active Badge */}
-            <div className="flex items-center gap-3 p-3 rounded-xl bg-[#161616] border border-[#262626]">
+            <div className="flex items-center gap-3 p-3 rounded-xl bg-[#171717] border border-[#262626]">
               <div className="h-10 w-10 rounded-lg bg-[#101010] border border-[#262626] p-1 flex items-center justify-center shrink-0">
                 <img src={activeBadge.icon} alt={activeBadge.name} className="w-full h-full object-contain" />
               </div>
@@ -498,7 +498,7 @@ export default function LeetCodeMatrix() {
               </div>
               <button
                 onClick={() => setIsHeatmapExpanded(true)}
-                className="text-xs font-mono text-[#3B82F6] hover:text-[#22D3EE] font-medium border border-[#262626] bg-[#161616] px-3 py-1 rounded-full transition-colors cursor-pointer"
+                className="text-xs font-mono text-[#3B82F6] hover:text-[#22D3EE] font-medium border border-[#262626] bg-[#171717] px-3 py-1 rounded-full transition-colors cursor-pointer"
               >
                 🔍 Expand Heatmap
               </button>
@@ -517,13 +517,13 @@ export default function LeetCodeMatrix() {
             <div className="space-y-2 pt-1">
               <p className="text-xs font-mono text-[#A1A1AA]">Top Algorithmic Tags Solved:</p>
               <div className="flex flex-wrap gap-1.5 font-mono text-[11px]">
-                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Arrays (60)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Strings (34)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Math (31)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Hash Table (25)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-emerald-500/30 text-emerald-300 font-semibold">Dynamic Programming (20)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-amber-500/30 text-amber-300 font-semibold">Two Pointers (20)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-purple-500/30 text-purple-300 font-semibold">Game Theory (7)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#171717] border border-[#262626] text-[#D4D4D8]">Arrays (60)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#171717] border border-[#262626] text-[#D4D4D8]">Strings (34)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#171717] border border-[#262626] text-[#D4D4D8]">Math (31)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#171717] border border-[#262626] text-[#D4D4D8]">Hash Table (25)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#171717] border border-emerald-500/30 text-emerald-300 font-semibold">Dynamic Programming (20)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#171717] border border-amber-500/30 text-amber-300 font-semibold">Two Pointers (20)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#171717] border border-purple-500/30 text-purple-300 font-semibold">Game Theory (7)</span>
               </div>
             </div>
 
@@ -548,7 +548,7 @@ export default function LeetCodeMatrix() {
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {recentAc.slice(0, 8).map((sub, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl bg-[#161616] border border-[#262626] flex flex-col justify-between space-y-2 font-mono hover:border-[#3B82F6] transition-colors">
+              <div key={idx} className="p-3.5 rounded-xl bg-[#171717] border border-[#262626] flex flex-col justify-between space-y-2 font-mono hover:border-[#3F3F46] transition-colors">
                 <div className="space-y-1">
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                     {sub.status}

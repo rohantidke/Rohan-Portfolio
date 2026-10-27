@@ -43,14 +43,14 @@ export default function ResumeModal({ isOpen, onClose }) {
               href="/Rohan_Tidke_Resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="rounded-full border border-[#262626] bg-[#000000] px-4 py-1.5 text-xs text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5"
+              className="rounded-full border border-[#262626] bg-[#000000] px-4 py-1.5 text-xs text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5"
             >
               ↗ Open Full PDF
             </a>
             <a 
               href="/Rohan_Tidke_Resume.pdf" 
               download="Rohan_Tidke_Resume.pdf"
-              className="rounded-full bg-[#3B82F6] px-4 py-1.5 text-xs text-[#FFFFFF] hover:bg-[#2563EB] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
+              className="rounded-full bg-[#3B82F6] px-4 py-1.5 text-xs text-[#FFFFFF] hover:bg-[#60A5FA] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
             >
               ⬇ Download Original PDF
             </a>
@@ -72,13 +72,13 @@ export default function ResumeModal({ isOpen, onClose }) {
                 title="Rohan Tidke Resume PDF"
                 className="w-full h-[82vh] rounded-xl border border-[#262626] shadow-2xl bg-white"
               >
-                <div className="p-8 text-center text-[#E5E7EB] space-y-4">
+                <div className="p-8 text-center text-[#D4D4D8] space-y-4">
                   <p>Your browser does not support inline PDF viewing.</p>
                   <a 
                     href="/Rohan_Tidke_Resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-block bg-[#3B82F6] text-[#FFFFFF] font-bold px-4 py-2 rounded-lg"
+                    className="inline-block bg-[#3B82F6] text-[#FFFFFF] font-bold px-4 py-2 rounded-lg hover:bg-[#60A5FA] transition-colors"
                   >
                     Open PDF in New Tab
                   </a>

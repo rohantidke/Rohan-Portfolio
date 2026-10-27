@@ -96,12 +96,12 @@ export default function TechStack() {
                 Java Backend & Distributed Systems Architecture
               </h3>
             </div>
-            <span className="text-xs font-mono text-[#A1A1AA] bg-[#161616] border border-[#262626] px-3 py-1 rounded-full shrink-0 self-start sm:self-auto">
+            <span className="text-xs font-mono text-[#A1A1AA] bg-[#171717] border border-[#262626] px-3 py-1 rounded-full shrink-0 self-start sm:self-auto">
               Production & Internship Tested
             </span>
           </div>
 
-          <p className="text-xs sm:text-sm text-[#E5E7EB] leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#D4D4D8] leading-relaxed">
             Specialized in architecting high-throughput REST APIs, stateless JWT authorization, and layered services in <strong className="text-[#FFFFFF] font-mono">Java 21 & Spring Boot 3</strong> with relational persistence in <strong className="text-[#FFFFFF] font-mono">MySQL & JPA/Hibernate</strong>.
           </p>
 
@@ -109,7 +109,7 @@ export default function TechStack() {
             {backendCoreSkills.map((skill, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-[#262626] bg-[#161616] p-4 space-y-1 hover:border-[#3B82F6] transition-all shadow-sm group"
+                className="rounded-xl border border-[#262626] bg-[#171717] p-4 space-y-1 hover:border-[#3F3F46] transition-all shadow-sm group"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs sm:text-sm font-bold text-[#FFFFFF] group-hover:text-[#3B82F6] transition-colors">
@@ -140,7 +140,7 @@ export default function TechStack() {
                   className={`px-3 py-1.5 rounded-full transition-all cursor-pointer font-medium ${
                     activeFilter === tab.id
                       ? 'bg-[#3B82F6] text-[#FFFFFF] font-bold shadow-sm'
-                      : 'border border-[#262626] bg-[#101010] text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6]'
+                      : 'border border-[#262626] bg-[#101010] text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46]'
                   }`}
                 >
                   {tab.label}
@@ -174,7 +174,7 @@ export default function TechStack() {
           {displayedCategories.map((cat) => (
             <article
               key={cat.id}
-              className="rounded-2xl border border-[#262626] bg-[#101010] p-6 space-y-5 hover:border-[#3B82F6] transition-all shadow-md flex flex-col justify-between"
+              className="rounded-2xl border border-[#262626] bg-[#101010] p-6 space-y-5 hover:border-[#3F3F46] transition-all shadow-md flex flex-col justify-between"
             >
               <div className="space-y-3">
                 {/* Category Header */}
@@ -185,7 +185,7 @@ export default function TechStack() {
                       {cat.category}
                     </h3>
                   </div>
-                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full border border-[#262626] bg-[#161616] text-[#22D3EE] font-semibold shrink-0">
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full border border-[#262626] bg-[#171717] text-[#22D3EE] font-semibold shrink-0">
                     {cat.badge}
                   </span>
                 </div>
@@ -203,12 +203,12 @@ export default function TechStack() {
                         key={sIdx}
                         className={`rounded-xl border px-3 py-2 flex flex-col transition-all ${
                           isHighlighted
-                            ? 'border-[#3B82F6]/40 bg-[#161616] text-[#FFFFFF] shadow-sm hover:border-[#3B82F6]'
-                            : 'border-[#262626] bg-[#161616] text-[#E5E7EB] hover:border-[#3B82F6]/40'
+                            ? 'border-[#3B82F6]/40 bg-[#171717] text-[#FFFFFF] shadow-sm hover:border-[#3B82F6]'
+                            : 'border-[#262626] bg-[#171717] text-[#D4D4D8] hover:border-[#3F3F46]'
                         }`}
                       >
                         <div className="flex items-center justify-between gap-1.5 font-mono text-xs font-semibold">
-                          <span className={isHighlighted ? 'text-[#FFFFFF]' : 'text-[#E5E7EB]'}>
+                          <span className={isHighlighted ? 'text-[#FFFFFF]' : 'text-[#D4D4D8]'}>
                             {skill.name}
                           </span>
                           {isHighlighted && (
@@ -238,7 +238,7 @@ export default function TechStack() {
         {/* Empty Search State */}
         {displayedCategories.length === 0 && (
           <div className="rounded-2xl border border-[#262626] bg-[#101010] p-8 text-center space-y-2">
-            <p className="text-sm font-mono text-[#E5E7EB]">No skills found matching "{searchQuery}"</p>
+            <p className="text-sm font-mono text-[#D4D4D8]">No skills found matching "{searchQuery}"</p>
             <button
               onClick={() => { setSearchQuery(''); setActiveFilter('all'); }}
               className="text-xs font-mono text-[#3B82F6] hover:underline"

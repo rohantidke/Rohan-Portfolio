@@ -30,7 +30,7 @@ export default function CommandPalette({ isOpen, onClose }) {
             placeholder="Search sections, projects, or skills..." 
             className="w-full bg-transparent text-sm text-[#FFFFFF] placeholder-[#A1A1AA]/60 focus:outline-none"
           />
-          <button onClick={onClose} className="text-[10px] border border-[#262626] bg-[#161616] rounded px-1.5 py-0.5 text-[#A1A1AA]">ESC</button>
+          <button onClick={onClose} className="text-[10px] border border-[#262626] bg-[#171717] rounded px-1.5 py-0.5 text-[#A1A1AA]">ESC</button>
         </div>
         
         <div className="p-2 max-h-64 overflow-y-auto space-y-1 text-xs">
@@ -40,7 +40,7 @@ export default function CommandPalette({ isOpen, onClose }) {
                 key={idx} 
                 href={item.href} 
                 onClick={onClose} 
-                className="flex items-center justify-between p-2 rounded-xl hover:bg-[#161616] text-[#E5E7EB] hover:text-[#FFFFFF] transition-colors"
+                className="flex items-center justify-between p-2 rounded-xl hover:bg-[#171717] text-[#D4D4D8] hover:text-[#FFFFFF] transition-colors"
               >
                 <span>{item.label}</span>
                 <span className="font-mono text-[10px] text-[#22D3EE]">{item.type}</span>

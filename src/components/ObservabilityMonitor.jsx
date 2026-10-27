@@ -8,14 +8,14 @@ export default function ObservabilityMonitor() {
         <div>
           <span className="font-mono text-xs text-[#22D3EE] font-bold uppercase tracking-widest">Real-time Telemetry</span>
           <h2 className="text-3xl font-bold text-[#FFFFFF] tracking-tight mt-1">Observability & Health Dashboard</h2>
-          <p className="text-sm text-[#E5E7EB] mt-1">Simulated Prometheus/CloudWatch cluster health and p99 latency metrics.</p>
+          <p className="text-sm text-[#D4D4D8] mt-1">Simulated Prometheus/CloudWatch cluster health and p99 latency metrics.</p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           
           <div className="rounded-2xl p-4 space-y-2 bg-[#101010] border border-[#262626] shadow-sm">
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs text-[#E5E7EB]">spring-auth-service</span>
+              <span className="font-mono text-xs text-[#D4D4D8]">spring-auth-service</span>
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
             <p className="text-lg font-bold text-[#FFFFFF] font-mono">99.98% <span className="text-xs text-[#22D3EE]">UP</span></p>
@@ -24,7 +24,7 @@ export default function ObservabilityMonitor() {
 
           <div className="rounded-2xl p-4 space-y-2 bg-[#101010] border border-[#262626] shadow-sm">
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs text-[#E5E7EB]">fastapi-ocr-service</span>
+              <span className="font-mono text-xs text-[#D4D4D8]">fastapi-ocr-service</span>
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
             <p className="text-lg font-bold text-[#FFFFFF] font-mono">99.92% <span className="text-xs text-[#22D3EE]">UP</span></p>
@@ -33,7 +33,7 @@ export default function ObservabilityMonitor() {
 
           <div className="rounded-2xl p-4 space-y-2 bg-[#101010] border border-[#262626] shadow-sm">
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs text-[#E5E7EB]">solidity-merkle-node</span>
+              <span className="font-mono text-xs text-[#D4D4D8]">solidity-merkle-node</span>
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
             <p className="text-lg font-bold text-[#FFFFFF] font-mono">100.0% <span className="text-xs text-[#22D3EE]">UP</span></p>
@@ -42,7 +42,7 @@ export default function ObservabilityMonitor() {
 
           <div className="rounded-2xl p-4 space-y-2 bg-[#101010] border border-[#262626] shadow-sm">
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs text-[#E5E7EB]">langchain-rag-service</span>
+              <span className="font-mono text-xs text-[#D4D4D8]">langchain-rag-service</span>
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
             <p className="text-lg font-bold text-[#FFFFFF] font-mono">99.95% <span className="text-xs text-[#22D3EE]">UP</span></p>

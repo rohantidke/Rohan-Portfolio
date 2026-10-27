@@ -44,22 +44,22 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
           </div>
 
           {/* Exact Supporting Text requested by recruiter guidelines */}
-          <p className="max-w-xl text-sm sm:text-base leading-relaxed text-[#E5E7EB] font-normal">
+          <p className="max-w-xl text-sm sm:text-base leading-relaxed text-[#D4D4D8] font-normal">
             I build secure REST APIs, scalable backend services, and reliable software systems. I enjoy solving challenging problems and turning complex requirements into practical solutions.
           </p>
 
           {/* Quick Technical Badges */}
           <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
-            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#E5E7EB]">
+            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#D4D4D8]">
               ☕ Java 21
             </span>
-            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#E5E7EB]">
+            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#D4D4D8]">
               🌱 Spring Boot 3
             </span>
-            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#E5E7EB]">
+            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#D4D4D8]">
               🔐 Spring Security & JWT
             </span>
-            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#E5E7EB]">
+            <span className="rounded-md border border-[#262626] bg-[#101010] px-2.5 py-1 text-[#D4D4D8]">
               🗄️ MySQL / JPA
             </span>
             <span className="rounded-md border border-[#3B82F6]/40 bg-[#3B82F6]/10 px-2.5 py-1 text-[#3B82F6] font-bold">
@@ -72,7 +72,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
             {/* Primary CTA */}
             <a
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#3B82F6] px-6 py-2.5 text-xs sm:text-sm font-semibold text-[#FFFFFF] hover:bg-[#2563EB] transition-all shadow-sm cursor-pointer font-mono"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#3B82F6] px-6 py-2.5 text-xs sm:text-sm font-semibold text-[#FFFFFF] hover:bg-[#60A5FA] transition-all shadow-sm cursor-pointer font-mono"
             >
               <span>View My Projects</span>
               <span>↓</span>
@@ -82,7 +82,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
             <a
               href="/Rohan_Tidke_Resume.pdf"
               download="Rohan_Tidke_Resume.pdf"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#262626] bg-[#101010] px-5 py-2.5 text-xs sm:text-sm font-semibold text-[#FFFFFF] hover:border-[#3B82F6] hover:text-[#3B82F6] transition-all cursor-pointer font-mono"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#262626] bg-[#101010] px-5 py-2.5 text-xs sm:text-sm font-semibold text-[#FFFFFF] hover:border-[#3F3F46] hover:text-[#FFFFFF] transition-all cursor-pointer font-mono"
             >
               <span>⬇ Download Resume</span>
             </a>
@@ -91,7 +91,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
             <button
               onClick={onOpenResume}
               type="button"
-              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2.5 text-xs sm:text-sm font-medium text-[#E5E7EB] hover:border-[#3B82F6] hover:text-[#FFFFFF] transition-all cursor-pointer font-mono"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2.5 text-xs sm:text-sm font-medium text-[#D4D4D8] hover:border-[#3F3F46] hover:text-[#FFFFFF] transition-all cursor-pointer font-mono"
             >
               <span>📄 View Resume</span>
             </button>
@@ -99,7 +99,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
             {/* Contact Me Button */}
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2.5 text-xs sm:text-sm font-medium text-[#E5E7EB] hover:border-[#3B82F6] hover:text-[#FFFFFF] transition-all cursor-pointer font-mono"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2.5 text-xs sm:text-sm font-medium text-[#D4D4D8] hover:border-[#3F3F46] hover:text-[#FFFFFF] transition-all cursor-pointer font-mono"
             >
               <span>Contact Me ✉</span>
             </a>
@@ -113,7 +113,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
               href="https://github.com/rohantidke"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#E5E7EB] hover:text-[#3B82F6] transition-colors"
+              className="inline-flex items-center gap-1.5 text-[#D4D4D8] hover:text-[#3B82F6] transition-colors"
             >
               <svg className="size-4 fill-current" viewBox="0 0 24 24">
                 <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -125,7 +125,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
               href="https://linkedin.com/in/rohan-tidke-31510a26b"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#E5E7EB] hover:text-[#3B82F6] transition-colors"
+              className="inline-flex items-center gap-1.5 text-[#D4D4D8] hover:text-[#3B82F6] transition-colors"
             >
               <svg className="size-4 fill-current" viewBox="0 0 24 24">
                 <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92m1.37 9.74v-8.37H5.09v8.37h2.74z"/>
@@ -137,7 +137,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
               href="https://leetcode.com/u/rohan6086/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#E5E7EB] hover:text-[#22D3EE] transition-colors"
+              className="inline-flex items-center gap-1.5 text-[#D4D4D8] hover:text-[#22D3EE] transition-colors"
             >
               <span>🟡 LeetCode @rohan6086 ↗</span>
             </a>
@@ -157,7 +157,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
                 <span className="h-2.5 w-2.5 rounded-full bg-green-500/80"></span>
                 <span className="ml-2 font-mono text-xs text-[#A1A1AA]">backend-pipeline.telemetry</span>
               </div>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#161616] px-2.5 py-0.5 text-[11px] font-mono text-[#22D3EE]">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#171717] px-2.5 py-0.5 text-[11px] font-mono text-[#22D3EE]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#22D3EE]"></span>
                 LIVE · {latency}ms
               </span>
@@ -171,8 +171,8 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
                 onClick={() => setActiveNode('ingress')}
                 className={`p-3 rounded-xl border transition-all cursor-pointer ${
                   activeNode === 'ingress' 
-                    ? 'border-[#3B82F6] bg-[#161616]' 
-                    : 'border-[#262626] bg-[#161616] hover:border-[#3B82F6]/50'
+                    ? 'border-[#3B82F6] bg-[#171717]' 
+                    : 'border-[#262626] bg-[#171717] hover:border-[#3F3F46]'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -198,8 +198,8 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
                 onClick={() => setActiveNode('gateway')}
                 className={`p-3 rounded-xl border transition-all cursor-pointer ${
                   activeNode === 'gateway' 
-                    ? 'border-[#3B82F6] bg-[#161616]' 
-                    : 'border-[#262626] bg-[#161616] hover:border-[#3B82F6]/50'
+                    ? 'border-[#3B82F6] bg-[#171717]' 
+                    : 'border-[#262626] bg-[#171717] hover:border-[#3F3F46]'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -225,8 +225,8 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
                 onClick={() => setActiveNode('persistence')}
                 className={`p-3 rounded-xl border transition-all cursor-pointer ${
                   activeNode === 'persistence' 
-                    ? 'border-[#3B82F6] bg-[#161616]' 
-                    : 'border-[#262626] bg-[#161616] hover:border-[#3B82F6]/50'
+                    ? 'border-[#3B82F6] bg-[#171717]' 
+                    : 'border-[#262626] bg-[#171717] hover:border-[#3F3F46]'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -249,7 +249,7 @@ export default function Hero({ onOpenRecruiter, onOpenResume, showToast }) {
               <button
                 onClick={onOpenRecruiter}
                 type="button"
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#161616] border border-[#262626] py-2.5 text-xs font-mono text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-all cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#171717] border border-[#262626] py-2.5 text-xs font-mono text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-all cursor-pointer"
               >
                 <span>⚡ Open Recruiter Fast-Track Summary (1-Min)</span>
               </button>

@@ -56,7 +56,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#000000] text-[#E5E7EB] selection:bg-[#3B82F6] selection:text-[#FFFFFF]">
+    <div className="relative min-h-screen bg-[#000000] text-[#D4D4D8] selection:bg-[#3B82F6] selection:text-[#FFFFFF]">
       <Header 
         onOpenCLI={() => setIsCLIOpen(true)}
         onOpenPalette={() => setIsPaletteOpen(true)}

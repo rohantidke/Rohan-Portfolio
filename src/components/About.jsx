@@ -19,7 +19,7 @@ export default function About({ onOpenResume }) {
         <div className="grid gap-8 lg:grid-cols-12 items-start">
           
           {/* Narrative Column */}
-          <div className="lg:col-span-7 space-y-5 text-sm sm:text-base text-[#E5E7EB] leading-relaxed">
+          <div className="lg:col-span-7 space-y-5 text-sm sm:text-base text-[#D4D4D8] leading-relaxed">
             <p>
               I am a final-year <strong className="text-[#FFFFFF]">Computer Engineering</strong> student at{' '}
               <strong className="text-[#FFFFFF]">Bharati Vidyapeeth's College of Engineering, Pune</strong>, graduating in{' '}
@@ -75,7 +75,7 @@ export default function About({ onOpenResume }) {
               <a
                 href="/Rohan_Tidke_Resume.pdf"
                 download="Rohan_Tidke_Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-full border border-[#262626] bg-[#101010] px-5 py-2 text-xs font-mono font-semibold text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-full border border-[#262626] bg-[#101010] px-5 py-2 text-xs font-mono font-semibold text-[#D4D4D8] hover:text-[#FFFFFF] hover:border-[#3F3F46] transition-all cursor-pointer"
               >
                 <span>⬇ Download PDF</span>
               </a>
@@ -98,7 +98,7 @@ export default function About({ onOpenResume }) {
                 <span className="font-mono text-xs uppercase tracking-wider text-[#3B82F6] font-semibold flex items-center gap-1.5">
                   <span>🎓</span> Academic Profile
                 </span>
-                <span className="text-xs font-mono text-[#22D3EE] bg-[#161616] border border-[#262626] px-2.5 py-0.5 rounded-full font-bold">
+                <span className="text-xs font-mono text-[#22D3EE] bg-[#171717] border border-[#262626] px-2.5 py-0.5 rounded-full font-bold">
                   8.5 CGPA
                 </span>
               </div>
@@ -106,7 +106,7 @@ export default function About({ onOpenResume }) {
               <div className="space-y-1">
                 <h3 className="text-sm font-bold text-[#FFFFFF]">Bharati Vidyapeeth's College of Engineering</h3>
                 <p className="text-xs text-[#A1A1AA] font-medium">Lavale, Pune · Affiliated with SPPU</p>
-                <p className="text-xs text-[#E5E7EB] pt-1">
+                <p className="text-xs text-[#D4D4D8] pt-1">
                   Bachelor of Engineering (B.E.) in <strong className="text-[#FFFFFF]">Computer Engineering</strong>
                 </p>
                 <p className="text-xs font-mono text-[#A1A1AA]">Expected Graduation: <span className="text-[#22D3EE] font-semibold">2027</span></p>
@@ -116,12 +116,12 @@ export default function About({ onOpenResume }) {
                 <p className="text-xs font-mono text-[#A1A1AA] uppercase tracking-wider">Prior Academic Record</p>
                 
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-[#E5E7EB]">Diploma in Computer Engineering (Yogeshwari Poly.)</span>
+                  <span className="text-[#D4D4D8]">Diploma in Computer Engineering (Yogeshwari Poly.)</span>
                   <span className="font-mono font-semibold text-[#FFFFFF]">88.46%</span>
                 </div>
 
                 <div className="flex justify-between items-center text-xs">
-                  <span className="text-[#E5E7EB]">Secondary School Certificate (SSC)</span>
+                  <span className="text-[#D4D4D8]">Secondary School Certificate (SSC)</span>
                   <span className="font-mono font-semibold text-[#FFFFFF]">95.60%</span>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function About({ onOpenResume }) {
                 <span>⚡</span> Technical Focus
               </span>
               
-              <ul className="space-y-2 text-xs text-[#E5E7EB]">
+              <ul className="space-y-2 text-xs text-[#D4D4D8]">
                 <li className="flex items-center justify-between">
                   <span>Primary Language</span>
                   <span className="font-mono font-semibold text-[#22D3EE]">Java (Modern Java / OOP)</span>
