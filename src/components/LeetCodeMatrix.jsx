@@ -56,13 +56,13 @@ function LiveSubmissionHeatmap({ calendarMap, totalSubmissions, activeDays, stre
   }, [calendarMap, totalSubmissions]);
 
   return (
-    <div className="rounded-2xl border border-[#263449] bg-[#0B1120] p-4 sm:p-5 space-y-4 shadow-inner">
-      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#CBD5E1] border-b border-[#263449] pb-3">
+    <div className="rounded-2xl border border-[#262626] bg-[#161616] p-4 sm:p-5 space-y-4 shadow-inner">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-[#E5E7EB] border-b border-[#262626] pb-3">
         <div className="flex items-center gap-1.5">
-          <span className="text-[#F8FAFC] font-bold text-sm sm:text-base">
+          <span className="text-[#FFFFFF] font-bold text-sm sm:text-base">
             {computedSubmissionsSum} submissions in the past one year
           </span>
-          <span className="text-[#94A3B8] text-xs" title="Live synchronized from official LeetCode Profile">ⓘ</span>
+          <span className="text-[#A1A1AA] text-xs" title="Live synchronized from official LeetCode Profile">ⓘ</span>
         </div>
         <div className="flex items-center gap-4 text-xs font-mono">
           <span>Total active days: <strong className="text-[#22D3EE] font-bold">{activeDays}</strong></span>
@@ -71,7 +71,7 @@ function LiveSubmissionHeatmap({ calendarMap, totalSubmissions, activeDays, stre
       </div>
 
       <div className="relative overflow-x-auto pb-1">
-        <div className="flex text-[10px] font-mono text-[#94A3B8] mb-2 pl-6 min-w-[650px] relative h-4">
+        <div className="flex text-[10px] font-mono text-[#A1A1AA] mb-2 pl-6 min-w-[650px] relative h-4">
           {monthHeaders.map((m, idx) => (
             <span
               key={idx}
@@ -84,7 +84,7 @@ function LiveSubmissionHeatmap({ calendarMap, totalSubmissions, activeDays, stre
         </div>
 
         <div className="flex items-start gap-1 min-w-[650px]">
-          <div className="flex flex-col justify-between text-[9px] font-mono text-[#94A3B8] h-[88px] pr-1.5 py-0.5 select-none">
+          <div className="flex flex-col justify-between text-[9px] font-mono text-[#A1A1AA] h-[88px] pr-1.5 py-0.5 select-none">
             <span>Mon</span>
             <span>Wed</span>
             <span>Fri</span>
@@ -94,7 +94,7 @@ function LiveSubmissionHeatmap({ calendarMap, totalSubmissions, activeDays, stre
             {weeks.map((week, wIdx) => (
               <div key={wIdx} className="flex flex-col gap-[3px]">
                 {week.map((day, dIdx) => {
-                  let bgClass = "bg-[#0F172A] border-[#263449]";
+                  let bgClass = "bg-[#101010] border-[#262626]";
                   if (day.count >= 10) bgClass = "bg-emerald-300";
                   else if (day.count >= 6) bgClass = "bg-emerald-400";
                   else if (day.count >= 3) bgClass = "bg-emerald-500";
@@ -120,13 +120,13 @@ function LiveSubmissionHeatmap({ calendarMap, totalSubmissions, activeDays, stre
             {hoveredDay ? (
               <span>{hoveredDay.count} submission{hoveredDay.count !== 1 ? 's' : ''} on {hoveredDay.formattedDate}</span>
             ) : (
-              <span className="text-[#94A3B8]">Hover over any day tile for live submission details</span>
+              <span className="text-[#A1A1AA]">Hover over any day tile for live submission details</span>
             )}
           </div>
 
-          <div className="flex items-center gap-1.5 text-[10px] text-[#94A3B8] select-none">
+          <div className="flex items-center gap-1.5 text-[10px] text-[#A1A1AA] select-none">
             <span>Less</span>
-            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#0F172A] border border-[#263449]"></span>
+            <span className="h-2.5 w-2.5 rounded-[2px] bg-[#101010] border border-[#262626]"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-emerald-700"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-emerald-500"></span>
             <span className="h-2.5 w-2.5 rounded-[2px] bg-emerald-400"></span>
@@ -316,7 +316,7 @@ export default function LeetCodeMatrix() {
   }, [fetchLiveLeetCodeData]);
 
   return (
-    <section id="coding" className="relative px-5 py-14 md:px-8 md:py-20 border-t border-[#263449] bg-[#0F172A]">
+    <section id="coding" className="relative px-5 py-14 md:px-8 md:py-20 border-t border-[#262626] bg-[#080808]">
       {/* Anchor alias for #leetcode */}
       <span id="leetcode" className="absolute -top-10"></span>
 
@@ -334,10 +334,10 @@ export default function LeetCodeMatrix() {
                 Algorithmic Mastery & Competitive Coding
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#FFFFFF] tracking-tight mt-1">
               Coding and Problem-Solving
             </h2>
-            <p className="text-sm text-[#94A3B8] mt-1 max-w-2xl">
+            <p className="text-sm text-[#A1A1AA] mt-1 max-w-2xl">
               Solved <strong className="text-[#22D3EE] font-mono">200+ LeetCode problems</strong> with a focus on data structures, algorithms, and computational complexity. Telemetry syncs live with official profiles.
             </p>
           </div>
@@ -346,7 +346,7 @@ export default function LeetCodeMatrix() {
             <button
               onClick={fetchLiveLeetCodeData}
               disabled={loading}
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#263449] bg-[#111C32] px-4 py-2 text-xs font-semibold text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#F8FAFC] transition-all cursor-pointer shadow-sm"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2 text-xs font-semibold text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#FFFFFF] transition-all cursor-pointer shadow-sm"
             >
               <span className={loading ? 'animate-spin' : ''}>⚡</span>
               <span>{loading ? 'Polling LeetCode...' : 'Live Sync Now'}</span>
@@ -356,7 +356,7 @@ export default function LeetCodeMatrix() {
               href="https://leetcode.com/u/rohan6086/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-[#263449] bg-[#111C32] px-5 py-2 text-xs font-bold text-[#22D3EE] transition-all hover:border-[#3B82F6] shadow-sm font-mono"
+              className="group inline-flex items-center gap-2 rounded-full border border-[#262626] bg-[#101010] px-5 py-2 text-xs font-bold text-[#22D3EE] transition-all hover:border-[#3B82F6] shadow-sm font-mono"
             >
               <span>🟡 LeetCode @rohan6086 ↗</span>
             </a>
@@ -365,7 +365,7 @@ export default function LeetCodeMatrix() {
               href="https://github.com/rohantidke"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#263449] bg-[#111C32] px-4 py-2 text-xs font-mono text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-[#3B82F6] transition-colors"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#101010] px-4 py-2 text-xs font-mono text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors"
             >
               <span>GitHub Repos ↗</span>
             </a>
@@ -376,11 +376,11 @@ export default function LeetCodeMatrix() {
         <div className="grid gap-6 lg:grid-cols-3">
           
           {/* Radial Doughnut & Solved Problems */}
-          <div className="rounded-2xl bg-[#111C32] border border-[#263449] p-6 space-y-6 flex flex-col justify-between shadow-sm">
-            <div className="flex items-center justify-between border-b border-[#263449] pb-4">
+          <div className="rounded-2xl bg-[#101010] border border-[#262626] p-6 space-y-6 flex flex-col justify-between shadow-sm">
+            <div className="flex items-center justify-between border-b border-[#262626] pb-4">
               <div>
-                <h3 className="text-base font-bold text-[#F8FAFC] font-mono">Solved Problems</h3>
-                <p className="text-xs text-[#94A3B8]">Live Solved Counter</p>
+                <h3 className="text-base font-bold text-[#FFFFFF] font-mono">Solved Problems</h3>
+                <p className="text-xs text-[#A1A1AA]">Live Solved Counter</p>
               </div>
               <span className="text-xs font-mono text-[#22D3EE] font-bold bg-[#22D3EE]/10 px-2.5 py-1 rounded-full border border-[#22D3EE]/30">
                 @rohan6086
@@ -392,7 +392,7 @@ export default function LeetCodeMatrix() {
               <div className="relative h-32 w-32 flex items-center justify-center">
                 <svg className="h-full w-full -rotate-90" viewBox="0 0 36 36">
                   <path
-                    className="text-[#0B1120]"
+                    className="text-[#161616]"
                     strokeWidth="3.2"
                     stroke="currentColor"
                     fill="none"
@@ -429,7 +429,7 @@ export default function LeetCodeMatrix() {
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center font-mono">
-                  <span className="text-3xl font-extrabold text-[#F8FAFC]">{stats.totalSolved}</span>
+                  <span className="text-3xl font-extrabold text-[#FFFFFF]">{stats.totalSolved}</span>
                   <span className="text-[10px] text-emerald-400 font-bold">Solved</span>
                 </div>
               </div>
@@ -441,9 +441,9 @@ export default function LeetCodeMatrix() {
               <div className="space-y-1">
                 <div className="flex justify-between">
                   <span className="text-emerald-400 font-bold">Easy</span>
-                  <span className="text-[#CBD5E1]"><strong>{stats.easySolved}</strong> <span className="text-[#94A3B8]">solved</span></span>
+                  <span className="text-[#E5E7EB]"><strong>{stats.easySolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
                 </div>
-                <div className="w-full bg-[#0B1120] h-2 rounded-full overflow-hidden border border-[#263449]">
+                <div className="w-full bg-[#161616] h-2 rounded-full overflow-hidden border border-[#262626]">
                   <div className="bg-emerald-400 h-full rounded-full transition-all duration-500" style={{ width: `${Math.min((stats.easySolved / 60) * 100, 100)}%` }}></div>
                 </div>
               </div>
@@ -451,9 +451,9 @@ export default function LeetCodeMatrix() {
               <div className="space-y-1">
                 <div className="flex justify-between">
                   <span className="text-amber-400 font-bold">Medium</span>
-                  <span className="text-[#CBD5E1]"><strong>{stats.mediumSolved}</strong> <span className="text-[#94A3B8]">solved</span></span>
+                  <span className="text-[#E5E7EB]"><strong>{stats.mediumSolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
                 </div>
-                <div className="w-full bg-[#0B1120] h-2 rounded-full overflow-hidden border border-[#263449]">
+                <div className="w-full bg-[#161616] h-2 rounded-full overflow-hidden border border-[#262626]">
                   <div className="bg-amber-400 h-full rounded-full transition-all duration-500" style={{ width: `${Math.min((stats.mediumSolved / 60) * 100, 100)}%` }}></div>
                 </div>
               </div>
@@ -461,9 +461,9 @@ export default function LeetCodeMatrix() {
               <div className="space-y-1">
                 <div className="flex justify-between">
                   <span className="text-rose-400 font-bold">Hard</span>
-                  <span className="text-[#CBD5E1]"><strong>{stats.hardSolved}</strong> <span className="text-[#94A3B8]">solved</span></span>
+                  <span className="text-[#E5E7EB]"><strong>{stats.hardSolved}</strong> <span className="text-[#A1A1AA]">solved</span></span>
                 </div>
-                <div className="w-full bg-[#0B1120] h-2 rounded-full overflow-hidden border border-[#263449]">
+                <div className="w-full bg-[#161616] h-2 rounded-full overflow-hidden border border-[#262626]">
                   <div className="bg-rose-500 h-full rounded-full transition-all duration-500" style={{ width: `${Math.min((stats.hardSolved / 25) * 100, 100)}%` }}></div>
                 </div>
               </div>
@@ -471,34 +471,34 @@ export default function LeetCodeMatrix() {
             </div>
 
             {/* Active Badge */}
-            <div className="flex items-center gap-3 p-3 rounded-xl bg-[#0B1120] border border-[#263449]">
-              <div className="h-10 w-10 rounded-lg bg-[#111C32] border border-[#263449] p-1 flex items-center justify-center shrink-0">
+            <div className="flex items-center gap-3 p-3 rounded-xl bg-[#161616] border border-[#262626]">
+              <div className="h-10 w-10 rounded-lg bg-[#101010] border border-[#262626] p-1 flex items-center justify-center shrink-0">
                 <img src={activeBadge.icon} alt={activeBadge.name} className="w-full h-full object-contain" />
               </div>
               <div>
-                <p className="text-xs font-bold text-[#F8FAFC] font-mono">{activeBadge.name}</p>
-                <p className="text-[10px] text-[#94A3B8] font-mono">Awarded Sept 26, 2026</p>
+                <p className="text-xs font-bold text-[#FFFFFF] font-mono">{activeBadge.name}</p>
+                <p className="text-[10px] text-[#A1A1AA] font-mono">Awarded Sept 26, 2026</p>
               </div>
             </div>
 
           </div>
 
           {/* Official Heatmap Card */}
-          <div className="lg:col-span-2 rounded-2xl bg-[#111C32] border border-[#263449] p-6 space-y-5 shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-2 rounded-2xl bg-[#101010] border border-[#262626] p-6 space-y-5 shadow-sm flex flex-col justify-between">
             
-            <div className="flex items-center justify-between border-b border-[#263449] pb-4">
+            <div className="flex items-center justify-between border-b border-[#262626] pb-4">
               <div>
-                <h3 className="text-base font-bold text-[#F8FAFC] font-mono flex items-center gap-2">
+                <h3 className="text-base font-bold text-[#FFFFFF] font-mono flex items-center gap-2">
                   <span>🟩 Verified LeetCode Activity Heatmap</span>
                   <span className="text-xs font-normal text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30 font-mono">
                     {stats.activeDays} Active Days
                   </span>
                 </h3>
-                <p className="text-xs text-[#94A3B8] mt-0.5">Telemetry automatically updating live every 15s</p>
+                <p className="text-xs text-[#A1A1AA] mt-0.5">Telemetry automatically updating live every 15s</p>
               </div>
               <button
                 onClick={() => setIsHeatmapExpanded(true)}
-                className="text-xs font-mono text-[#3B82F6] hover:text-[#22D3EE] font-medium border border-[#263449] bg-[#0B1120] px-3 py-1 rounded-full transition-colors cursor-pointer"
+                className="text-xs font-mono text-[#3B82F6] hover:text-[#22D3EE] font-medium border border-[#262626] bg-[#161616] px-3 py-1 rounded-full transition-colors cursor-pointer"
               >
                 🔍 Expand Heatmap
               </button>
@@ -515,15 +515,15 @@ export default function LeetCodeMatrix() {
 
             {/* Algorithmic Tags */}
             <div className="space-y-2 pt-1">
-              <p className="text-xs font-mono text-[#94A3B8]">Top Algorithmic Tags Solved:</p>
+              <p className="text-xs font-mono text-[#A1A1AA]">Top Algorithmic Tags Solved:</p>
               <div className="flex flex-wrap gap-1.5 font-mono text-[11px]">
-                <span className="px-2.5 py-1 rounded-lg bg-[#0B1120] border border-[#263449] text-[#CBD5E1]">Arrays (60)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#0B1120] border border-[#263449] text-[#CBD5E1]">Strings (34)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#0B1120] border border-[#263449] text-[#CBD5E1]">Math (31)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#0B1120] border border-[#263449] text-[#CBD5E1]">Hash Table (25)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-semibold">Dynamic Programming (20)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-amber-950/40 border border-amber-500/30 text-amber-300 font-semibold">Two Pointers (20)</span>
-                <span className="px-2.5 py-1 rounded-lg bg-purple-950/40 border border-purple-500/30 text-purple-300 font-semibold">Game Theory (7)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Arrays (60)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Strings (34)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Math (31)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-[#262626] text-[#E5E7EB]">Hash Table (25)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-emerald-500/30 text-emerald-300 font-semibold">Dynamic Programming (20)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-amber-500/30 text-amber-300 font-semibold">Two Pointers (20)</span>
+                <span className="px-2.5 py-1 rounded-lg bg-[#161616] border border-purple-500/30 text-purple-300 font-semibold">Game Theory (7)</span>
               </div>
             </div>
 
@@ -532,13 +532,13 @@ export default function LeetCodeMatrix() {
         </div>
 
         {/* Live Recent Accepted Submissions Table */}
-        <div className="rounded-2xl bg-[#111C32] border border-[#263449] p-6 space-y-4 shadow-sm">
-          <div className="flex items-center justify-between border-b border-[#263449] pb-3">
+        <div className="rounded-2xl bg-[#101010] border border-[#262626] p-6 space-y-4 shadow-sm">
+          <div className="flex items-center justify-between border-b border-[#262626] pb-3">
             <div>
-              <h3 className="text-base font-bold text-[#F8FAFC] font-mono flex items-center gap-2">
+              <h3 className="text-base font-bold text-[#FFFFFF] font-mono flex items-center gap-2">
                 <span>⚡ Live Recent Accepted Submissions</span>
               </h3>
-              <p className="text-xs text-[#94A3B8]">Auto-polling active: Latest AC problem appears here live</p>
+              <p className="text-xs text-[#A1A1AA]">Auto-polling active: Latest AC problem appears here live</p>
             </div>
             <span className="text-xs font-mono text-[#22D3EE] flex items-center gap-1.5 bg-[#22D3EE]/10 px-3 py-1 rounded-full border border-[#22D3EE]/30">
               <span className="h-2 w-2 rounded-full bg-[#22D3EE] animate-pulse"></span>
@@ -548,14 +548,14 @@ export default function LeetCodeMatrix() {
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {recentAc.slice(0, 8).map((sub, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl bg-[#0B1120] border border-[#263449] flex flex-col justify-between space-y-2 font-mono hover:border-[#3B82F6] transition-colors">
+              <div key={idx} className="p-3.5 rounded-xl bg-[#161616] border border-[#262626] flex flex-col justify-between space-y-2 font-mono hover:border-[#3B82F6] transition-colors">
                 <div className="space-y-1">
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                     {sub.status}
                   </span>
-                  <p className="text-xs font-bold text-[#F8FAFC] leading-snug line-clamp-2 mt-1">{sub.title}</p>
+                  <p className="text-xs font-bold text-[#FFFFFF] leading-snug line-clamp-2 mt-1">{sub.title}</p>
                 </div>
-                <div className="flex justify-between items-center text-[10px] text-[#94A3B8] border-t border-[#263449] pt-2">
+                <div className="flex justify-between items-center text-[10px] text-[#A1A1AA] border-t border-[#262626] pt-2">
                   <span>{sub.category}</span>
                   <span className="text-[#22D3EE] font-semibold">{sub.time}</span>
                 </div>
@@ -569,20 +569,20 @@ export default function LeetCodeMatrix() {
       {/* Lightbox Modal */}
       {isHeatmapExpanded && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B1120]/80 backdrop-blur-md cursor-pointer"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#000000]/80 backdrop-blur-md cursor-pointer"
           onClick={() => setIsHeatmapExpanded(false)}
         >
-          <div className="relative max-w-4xl w-full rounded-2xl bg-[#111C32] border border-[#263449] p-6 space-y-4 shadow-2xl">
-            <div className="flex justify-between items-center border-b border-[#263449] pb-3 font-mono">
-              <span className="text-sm font-bold text-[#F8FAFC]">🟩 Rohan Tidke - Official LeetCode Profile Heatmap</span>
-              <button onClick={() => setIsHeatmapExpanded(false)} className="text-[#94A3B8] hover:text-[#F8FAFC] text-lg">✕</button>
+          <div className="relative max-w-4xl w-full rounded-2xl bg-[#101010] border border-[#262626] p-6 space-y-4 shadow-2xl">
+            <div className="flex justify-between items-center border-b border-[#262626] pb-3 font-mono">
+              <span className="text-sm font-bold text-[#FFFFFF]">🟩 Rohan Tidke - Official LeetCode Profile Heatmap</span>
+              <button onClick={() => setIsHeatmapExpanded(false)} className="text-[#A1A1AA] hover:text-[#FFFFFF] text-lg">✕</button>
             </div>
             <img
               src="/leetcode_heatmap.png"
               alt="High-Res Official LeetCode Heatmap"
-              className="w-full h-auto object-contain rounded-xl border border-[#263449]"
+              className="w-full h-auto object-contain rounded-xl border border-[#262626]"
             />
-            <div className="flex justify-between text-xs font-mono text-[#94A3B8]">
+            <div className="flex justify-between text-xs font-mono text-[#A1A1AA]">
               <span>{stats.totalSubmissions} submissions in past 1 year · {stats.activeDays} active days · {stats.streak} max streak</span>
               <a href="https://leetcode.com/u/rohan6086/" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#22D3EE]">
                 View @rohan6086 on LeetCode ↗

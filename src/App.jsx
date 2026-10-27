@@ -56,7 +56,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#0B1120] text-[#CBD5E1] selection:bg-[#3B82F6] selection:text-[#F8FAFC]">
+    <div className="relative min-h-screen bg-[#000000] text-[#E5E7EB] selection:bg-[#3B82F6] selection:text-[#FFFFFF]">
       <Header 
         onOpenCLI={() => setIsCLIOpen(true)}
         onOpenPalette={() => setIsPaletteOpen(true)}
@@ -65,46 +65,46 @@ export default function App() {
       />
 
       <main>
-        {/* 1. Hero / Developer Profile Header (Main background #0B1120) */}
+        {/* 1. Hero / Developer Profile Header (Main background #000000) */}
         <Hero 
           onOpenRecruiter={() => setIsRecruiterOpen(true)}
           onOpenResume={() => setIsResumeOpen(true)}
           showToast={showToast}
         />
 
-        {/* 2. Professional About Me & Background (Alternate background #0F172A) */}
+        {/* 2. Professional About Me & Background (Alternate background #080808) */}
         <About onOpenResume={() => setIsResumeOpen(true)} />
 
-        {/* 3. Core Technical Competencies & Skills (Main background #0B1120) */}
+        {/* 3. Core Technical Competencies & Skills (Main background #000000) */}
         <TechStack />
 
-        {/* 4. Featured Engineering Systems & Projects (Alternate background #0F172A) */}
+        {/* 4. Featured Engineering Systems & Projects (Alternate background #080808) */}
         <Projects onOpenCaseStudy={(type) => setCaseStudyType(type)} />
 
-        {/* 5. Professional Work Experience & Internships (Main background #0B1120) */}
+        {/* 5. Professional Work Experience & Internships (Main background #000000) */}
         <Experience />
 
-        {/* 6. Problem Solving & LeetCode Matrix (Alternate background #0F172A) */}
+        {/* 6. Problem Solving & LeetCode Matrix (Alternate background #080808) */}
         <LeetCodeMatrix />
 
-        {/* 7. Verified GitHub Activity Telemetry & Heatmap (Main background #0B1120) */}
+        {/* 7. Verified GitHub Activity Telemetry & Heatmap (Main background #000000) */}
         <GitHubTelemetry />
 
-        {/* 8. Live System Observability & Metrics (Alternate background #0F172A) */}
+        {/* 8. Live System Observability & Metrics (Alternate background #080808) */}
         <ObservabilityMonitor />
 
-        {/* 9. Academic Background & Qualifications (Main background #0B1120) */}
+        {/* 9. Academic Background & Qualifications (Main background #000000) */}
         <Education />
 
-        {/* 10. Direct Contact Channels (Alternate background #0F172A) */}
+        {/* 10. Direct Contact Channels (Alternate background #080808) */}
         <Contact showToast={showToast} />
       </main>
 
-      <footer className="border-t border-[#263449] py-12 px-5 text-center text-xs text-[#94A3B8] font-mono space-y-2 bg-[#0B1120]">
+      <footer className="border-t border-[#262626] py-12 px-5 text-center text-xs text-[#A1A1AA] font-mono space-y-2 bg-[#000000]">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left space-y-1">
-            <p className="font-bold text-[#F8FAFC] text-sm">Rohan Tidke</p>
-            <p className="text-[#94A3B8] text-xs">Java Backend Developer | Spring Boot | Microservices</p>
+            <p className="font-bold text-[#FFFFFF] text-sm">Rohan Tidke</p>
+            <p className="text-[#A1A1AA] text-xs">Java Backend Developer | Spring Boot | Microservices</p>
           </div>
           <div className="flex items-center gap-4 text-xs">
             <a href="#home" className="hover:text-[#3B82F6] transition-colors">Back to Top ↑</a>
@@ -113,7 +113,7 @@ export default function App() {
             <a href="https://leetcode.com/u/rohan6086/" target="_blank" rel="noopener noreferrer" className="hover:text-[#3B82F6] transition-colors">LeetCode ↗</a>
           </div>
         </div>
-        <p className="text-[11px] text-[#94A3B8] pt-4">© 2026 Rohan Tidke · Pune, India · rohantidke6086@gmail.com</p>
+        <p className="text-[11px] text-[#A1A1AA] pt-4">© 2026 Rohan Tidke · Pune, India · rohantidke6086@gmail.com</p>
       </footer>
 
       {/* Modals & Overlays */}
@@ -147,7 +147,7 @@ export default function App() {
 
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 rounded-xl bg-[#3B82F6] text-[#F8FAFC] font-semibold px-4 py-2.5 text-xs shadow-2xl flex items-center gap-2 border border-[#263449]">
+        <div className="fixed bottom-6 right-6 z-50 rounded-xl bg-[#3B82F6] text-[#FFFFFF] font-semibold px-4 py-2.5 text-xs shadow-2xl flex items-center gap-2 border border-[#262626]">
           <span>✓</span>
           <span>{toastMessage}</span>
         </div>

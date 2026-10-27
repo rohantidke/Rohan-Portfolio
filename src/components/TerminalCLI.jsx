@@ -286,31 +286,31 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B1120]/80 backdrop-blur-md cursor-default"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#000000]/80 backdrop-blur-md cursor-default"
       onClick={() => inputRef.current && inputRef.current.focus()}
     >
       <div 
-        className="w-full max-w-2xl rounded-2xl bg-[#0F172A] border border-[#263449] shadow-2xl overflow-hidden font-mono text-xs"
+        className="w-full max-w-2xl rounded-2xl bg-[#080808] border border-[#262626] shadow-2xl overflow-hidden font-mono text-xs"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-[#111C32] px-4 py-2.5 flex items-center justify-between border-b border-[#263449] select-none">
+        <div className="bg-[#101010] px-4 py-2.5 flex items-center justify-between border-b border-[#262626] select-none">
           <div className="flex items-center gap-2">
             <button onClick={onClose} className="h-3 w-3 rounded-full bg-red-500/80 hover:bg-red-500 cursor-pointer" title="Close"></button>
             <span className="h-3 w-3 rounded-full bg-amber-500/80"></span>
             <span className="h-3 w-3 rounded-full bg-emerald-500/80"></span>
             <span className="text-[#22D3EE] font-medium text-[11px] ml-2">rohan@developer-terminal:~</span>
           </div>
-          <button onClick={onClose} className="text-[#94A3B8] hover:text-[#F8FAFC] font-bold text-sm cursor-pointer">✕</button>
+          <button onClick={onClose} className="text-[#A1A1AA] hover:text-[#FFFFFF] font-bold text-sm cursor-pointer">✕</button>
         </div>
 
         {/* Output Logs */}
-        <div ref={outputRef} className="p-4 h-84 overflow-y-auto space-y-2 text-[#CBD5E1] bg-[#0B1120] select-text">
+        <div ref={outputRef} className="p-4 h-84 overflow-y-auto space-y-2 text-[#E5E7EB] bg-[#000000] select-text">
           {history.map((item, i) => (
             <div key={i}>
-              {item.type === 'user' && <p className="text-[#F8FAFC] font-bold"><span className="text-[#3B82F6]">&gt;</span> {item.text.replace('> ', '')}</p>}
+              {item.type === 'user' && <p className="text-[#FFFFFF] font-bold"><span className="text-[#3B82F6]">&gt;</span> {item.text.replace('> ', '')}</p>}
               {item.type === 'system' && <p className="text-[#22D3EE]">{item.text}</p>}
-              {item.type === 'output' && <pre className="whitespace-pre-wrap font-mono text-[#CBD5E1] ml-2">{item.text}</pre>}
+              {item.type === 'output' && <pre className="whitespace-pre-wrap font-mono text-[#E5E7EB] ml-2">{item.text}</pre>}
               {item.type === 'success' && <pre className="whitespace-pre-wrap font-mono text-emerald-400 font-bold ml-2">{item.text}</pre>}
               {item.type === 'error' && <p className="text-red-400 ml-2">{item.text}</p>}
             </div>
@@ -318,7 +318,7 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
         </div>
 
         {/* Form Input */}
-        <form onSubmit={handleCommand} className="p-3 bg-[#111C32] border-t border-[#263449] flex items-center gap-2">
+        <form onSubmit={handleCommand} className="p-3 bg-[#101010] border-t border-[#262626] flex items-center gap-2">
           <span className="text-[#3B82F6] font-bold">&gt;</span>
           <input 
             ref={inputRef}
@@ -327,7 +327,7 @@ Direct Contact: rohantidke6086@gmail.com | +91-8208391705
             value={inputVal} 
             onChange={(e) => setInputVal(e.target.value)} 
             placeholder="type a command (e.g. help, skills, projects, exp, contact)..." 
-            className="w-full bg-transparent text-[#F8FAFC] focus:outline-none placeholder-[#94A3B8]/60 font-mono text-xs"
+            className="w-full bg-transparent text-[#FFFFFF] focus:outline-none placeholder-[#A1A1AA]/60 font-mono text-xs"
           />
         </form>
 

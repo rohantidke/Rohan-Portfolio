@@ -6,24 +6,24 @@ export default function ResumeModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-[#0B1120]/80 backdrop-blur-md">
-      <div className="w-full max-w-5xl max-h-[96vh] rounded-2xl bg-[#0F172A] border border-[#263449] shadow-2xl flex flex-col overflow-hidden">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-[#000000]/80 backdrop-blur-md">
+      <div className="w-full max-w-5xl max-h-[96vh] rounded-2xl bg-[#080808] border border-[#262626] shadow-2xl flex flex-col overflow-hidden">
         
         {/* Modal Top Bar */}
-        <div className="bg-[#111C32] px-4 py-3 border-b border-[#263449] flex items-center justify-between shrink-0 flex-wrap gap-2">
+        <div className="bg-[#101010] px-4 py-3 border-b border-[#262626] flex items-center justify-between shrink-0 flex-wrap gap-2">
           <div className="flex items-center gap-2">
             <span onClick={onClose} className="h-3 w-3 rounded-full bg-red-500/80 hover:bg-red-500 cursor-pointer" title="Close"></span>
             <span className="h-3 w-3 rounded-full bg-amber-500/80"></span>
             <span className="h-3 w-3 rounded-full bg-emerald-500/80"></span>
-            <span className="font-mono text-xs sm:text-sm font-bold text-[#F8FAFC] ml-2">📄 Rohan_Tidke_Resume.pdf</span>
+            <span className="font-mono text-xs sm:text-sm font-bold text-[#FFFFFF] ml-2">📄 Rohan_Tidke_Resume.pdf</span>
           </div>
 
           {/* View Mode Toggle */}
-          <div className="flex items-center gap-1 rounded-full border border-[#263449] bg-[#0B1120] p-1 font-mono text-xs">
+          <div className="flex items-center gap-1 rounded-full border border-[#262626] bg-[#000000] p-1 font-mono text-xs">
             <button
               onClick={() => setViewMode('pdf')}
               className={`px-3 py-1 rounded-full transition-colors font-medium cursor-pointer ${
-                viewMode === 'pdf' ? 'bg-[#3B82F6] text-[#F8FAFC]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'
+                viewMode === 'pdf' ? 'bg-[#3B82F6] text-[#FFFFFF]' : 'text-[#A1A1AA] hover:text-[#FFFFFF]'
               }`}
             >
               📄 PDF Embed
@@ -31,7 +31,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             <button
               onClick={() => setViewMode('doc')}
               className={`px-3 py-1 rounded-full transition-colors font-medium cursor-pointer ${
-                viewMode === 'doc' ? 'bg-[#3B82F6] text-[#F8FAFC]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'
+                viewMode === 'doc' ? 'bg-[#3B82F6] text-[#FFFFFF]' : 'text-[#A1A1AA] hover:text-[#FFFFFF]'
               }`}
             >
               📝 Document View
@@ -43,42 +43,42 @@ export default function ResumeModal({ isOpen, onClose }) {
               href="/Rohan_Tidke_Resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="rounded-full border border-[#263449] bg-[#0B1120] px-4 py-1.5 text-xs text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-[#3B82F6] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5"
+              className="rounded-full border border-[#262626] bg-[#000000] px-4 py-1.5 text-xs text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5"
             >
               ↗ Open Full PDF
             </a>
             <a 
               href="/Rohan_Tidke_Resume.pdf" 
               download="Rohan_Tidke_Resume.pdf"
-              className="rounded-full bg-[#3B82F6] px-4 py-1.5 text-xs text-[#F8FAFC] hover:bg-[#2563EB] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
+              className="rounded-full bg-[#3B82F6] px-4 py-1.5 text-xs text-[#FFFFFF] hover:bg-[#2563EB] font-mono transition-colors font-medium cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
             >
               ⬇ Download Original PDF
             </a>
-            <button onClick={onClose} className="text-[#94A3B8] hover:text-[#F8FAFC] text-lg ml-2 cursor-pointer font-bold">✕</button>
+            <button onClick={onClose} className="text-[#A1A1AA] hover:text-[#FFFFFF] text-lg ml-2 cursor-pointer font-bold">✕</button>
           </div>
         </div>
 
         {/* MODAL CONTENT */}
         {viewMode === 'pdf' ? (
           /* EXACT ORIGINAL PDF EMBED VIEWER */
-          <div className="flex-1 overflow-hidden p-2 sm:p-4 bg-[#0B1120] flex justify-center items-center">
+          <div className="flex-1 overflow-hidden p-2 sm:p-4 bg-[#000000] flex justify-center items-center">
             <object
               data="/Rohan_Tidke_Resume.pdf#toolbar=1"
               type="application/pdf"
-              className="w-full h-[82vh] rounded-xl border border-[#263449] shadow-2xl bg-white"
+              className="w-full h-[82vh] rounded-xl border border-[#262626] shadow-2xl bg-white"
             >
               <iframe 
                 src="/Rohan_Tidke_Resume.pdf#toolbar=1" 
                 title="Rohan Tidke Resume PDF"
-                className="w-full h-[82vh] rounded-xl border border-[#263449] shadow-2xl bg-white"
+                className="w-full h-[82vh] rounded-xl border border-[#262626] shadow-2xl bg-white"
               >
-                <div className="p-8 text-center text-[#CBD5E1] space-y-4">
+                <div className="p-8 text-center text-[#E5E7EB] space-y-4">
                   <p>Your browser does not support inline PDF viewing.</p>
                   <a 
                     href="/Rohan_Tidke_Resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-block bg-[#3B82F6] text-[#F8FAFC] font-bold px-4 py-2 rounded-lg"
+                    className="inline-block bg-[#3B82F6] text-[#FFFFFF] font-bold px-4 py-2 rounded-lg"
                   >
                     Open PDF in New Tab
                   </a>
@@ -88,7 +88,7 @@ export default function ResumeModal({ isOpen, onClose }) {
           </div>
         ) : (
           /* EXACT PIXEL-PERFECT HIGH-FIDELITY DOCUMENT VIEW */
-          <div className="flex-1 overflow-y-auto p-3 sm:p-6 bg-[#0B1120] flex justify-center items-start">
+          <div className="flex-1 overflow-y-auto p-3 sm:p-6 bg-[#000000] flex justify-center items-start">
             <div 
               style={{ 
                 backgroundColor: '#ffffff', 

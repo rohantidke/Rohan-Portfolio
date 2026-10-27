@@ -7,7 +7,7 @@ export default function Projects({ onOpenCaseStudy }) {
     {
       id: 'credential',
       badge: 'FEATURED PROJECT 01',
-      badgeColor: 'border-[#263449] text-[#22D3EE] bg-[#0F172A]',
+      badgeColor: 'border-[#262626] text-[#22D3EE] bg-[#161616]',
       title: 'Credential Fraud Detection Platform',
       tagline: 'Microservices-Based Digital Credential Verification & Anti-Tampering Engine',
       problem: 'Educational institutions and employers struggle to verify digital credentials at scale, while fraudulent PDFs and tampered transcripts frequently evade conventional checksum or manual verification.',
@@ -42,7 +42,7 @@ export default function Projects({ onOpenCaseStudy }) {
     {
       id: 'forensics',
       badge: 'FEATURED PROJECT 02',
-      badgeColor: 'border-[#263449] text-[#3B82F6] bg-[#0F172A]',
+      badgeColor: 'border-[#262626] text-[#3B82F6] bg-[#161616]',
       title: 'Digital Image Forensics Tool (VeriPix)',
       tagline: 'Cryptographic Image Integrity, EXIF Auditing & Manipulation Analysis Suite',
       problem: 'Image manipulation (splicing, clone-stamping, metadata scrubbing) undermines digital evidence integrity in academic, investigative, and compliance contexts.',
@@ -76,7 +76,7 @@ export default function Projects({ onOpenCaseStudy }) {
     {
       id: 'complaint',
       badge: 'ADDITIONAL PROJECT 03',
-      badgeColor: 'border-[#263449] text-[#22D3EE] bg-[#0F172A]',
+      badgeColor: 'border-[#262626] text-[#22D3EE] bg-[#161616]',
       title: 'Full-Stack Complaint Management System',
       tagline: 'Multi-Tenant Grievance Lifecycle Tracking System with Stateless JWT & Layered Architecture',
       problem: 'Large organizations require robust, auditable grievance tracking systems that enforce strict role separation between citizens, department officers, and executive admins without session bottlenecks.',
@@ -110,7 +110,7 @@ export default function Projects({ onOpenCaseStudy }) {
     {
       id: 'rag',
       badge: 'ADDITIONAL PROJECT 04',
-      badgeColor: 'border-[#263449] text-[#3B82F6] bg-[#0F172A]',
+      badgeColor: 'border-[#262626] text-[#3B82F6] bg-[#161616]',
       title: 'Full-Stack RAG Chat Platform',
       tagline: 'Retrieval-Augmented Generation & Distributed AI Semantic Search Platform',
       problem: 'General-purpose LLMs hallucinate when queried on domain-specific private manuals and lack verifiable citations.',
@@ -143,7 +143,7 @@ export default function Projects({ onOpenCaseStudy }) {
   ];
 
   return (
-    <section id="projects" className="relative px-5 py-14 md:px-8 md:py-20 border-t border-[#263449] bg-[#0F172A]">
+    <section id="projects" className="relative px-5 py-14 md:px-8 md:py-20 border-t border-[#262626] bg-[#080808]">
       <div className="mx-auto w-full max-w-6xl space-y-12">
         
         {/* Section Header */}
@@ -153,13 +153,13 @@ export default function Projects({ onOpenCaseStudy }) {
               <span className="h-2 w-2 rounded-full bg-[#3B82F6]"></span>
               Verified Software Engineering Systems
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">Featured Projects</h2>
-            <p className="mt-1 text-sm text-[#94A3B8]">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#FFFFFF] tracking-tight mt-1">Featured Projects</h2>
+            <p className="mt-1 text-sm text-[#A1A1AA]">
               Distributed microservices, anti-fraud engines, digital forensics, and layered REST API architectures.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 font-mono text-xs text-[#94A3B8]">
+          <div className="flex items-center gap-2 font-mono text-xs text-[#A1A1AA]">
             <span>Built with real codebases & production standards</span>
           </div>
         </div>
@@ -169,20 +169,20 @@ export default function Projects({ onOpenCaseStudy }) {
           {projects.map((proj) => (
             <article 
               key={proj.id} 
-              className="rounded-2xl border border-[#263449] bg-[#111C32] p-6 sm:p-8 space-y-6 hover:border-[#3B82F6] transition-all shadow-md"
+              className="rounded-2xl border border-[#262626] bg-[#101010] p-6 sm:p-8 space-y-6 hover:border-[#3B82F6] transition-all shadow-md"
             >
               {/* Card Top: Badges & Title */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#263449] pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#262626] pb-4">
                 <div>
                   <div className="flex items-center gap-2.5 flex-wrap">
                     <span className={`text-[11px] font-mono font-bold px-3 py-1 rounded-full border ${proj.badgeColor}`}>
                       {proj.badge}
                     </span>
-                    <span className="text-xs font-mono text-[#94A3B8]">
+                    <span className="text-xs font-mono text-[#A1A1AA]">
                       ID: #{proj.id}
                     </span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#F8FAFC] mt-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#FFFFFF] mt-2">
                     {proj.title}
                   </h3>
                   <p className="text-xs sm:text-sm font-mono text-[#3B82F6] mt-0.5">
@@ -193,9 +193,9 @@ export default function Projects({ onOpenCaseStudy }) {
                 {/* Quick Metrics */}
                 <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                   {proj.stats.map((s, sIdx) => (
-                    <div key={sIdx} className="rounded-xl border border-[#263449] bg-[#0B1120] px-3 py-1.5 text-center">
-                      <p className="text-xs sm:text-sm font-mono font-bold text-[#F8FAFC]">{s.value}</p>
-                      <p className="text-[10px] text-[#94A3B8] font-sans">{s.label}</p>
+                    <div key={sIdx} className="rounded-xl border border-[#262626] bg-[#161616] px-3 py-1.5 text-center">
+                      <p className="text-xs sm:text-sm font-mono font-bold text-[#FFFFFF]">{s.value}</p>
+                      <p className="text-[10px] text-[#A1A1AA] font-sans">{s.label}</p>
                     </div>
                   ))}
                 </div>
@@ -203,20 +203,20 @@ export default function Projects({ onOpenCaseStudy }) {
 
               {/* Problem & Solution Breakdown */}
               <div className="grid gap-4 md:grid-cols-2 text-xs sm:text-sm leading-relaxed">
-                <div className="rounded-xl border border-[#263449] bg-[#0B1120] p-4 space-y-1.5">
-                  <p className="font-mono text-xs uppercase tracking-wider text-[#F8FAFC] font-semibold flex items-center gap-1.5">
+                <div className="rounded-xl border border-[#262626] bg-[#161616] p-4 space-y-1.5">
+                  <p className="font-mono text-xs uppercase tracking-wider text-[#FFFFFF] font-semibold flex items-center gap-1.5">
                     <span>⚠️</span> The Problem
                   </p>
-                  <p className="text-[#CBD5E1]">
+                  <p className="text-[#E5E7EB]">
                     {proj.problem}
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-[#263449] bg-[#0B1120] p-4 space-y-1.5">
+                <div className="rounded-xl border border-[#262626] bg-[#161616] p-4 space-y-1.5">
                   <p className="font-mono text-xs uppercase tracking-wider text-[#22D3EE] font-semibold flex items-center gap-1.5">
                     <span>💡</span> The Solution
                   </p>
-                  <p className="text-[#CBD5E1]">
+                  <p className="text-[#E5E7EB]">
                     {proj.solution}
                   </p>
                 </div>
@@ -224,12 +224,12 @@ export default function Projects({ onOpenCaseStudy }) {
 
               {/* Technologies Badges */}
               <div className="space-y-2">
-                <p className="font-mono text-xs text-[#94A3B8] uppercase tracking-wider">Technology Stack:</p>
+                <p className="font-mono text-xs text-[#A1A1AA] uppercase tracking-wider">Technology Stack:</p>
                 <div className="flex flex-wrap gap-1.5">
                   {proj.techStack.map((tech, tIdx) => (
                     <span 
                       key={tIdx} 
-                      className="rounded-lg border border-[#263449] bg-[#0B1120] px-2.5 py-1 text-xs font-mono text-[#CBD5E1]"
+                      className="rounded-lg border border-[#262626] bg-[#161616] px-2.5 py-1 text-xs font-mono text-[#E5E7EB]"
                     >
                       {tech}
                     </span>
@@ -239,8 +239,8 @@ export default function Projects({ onOpenCaseStudy }) {
 
               {/* Key Implemented Features */}
               <div className="space-y-2 pt-1">
-                <p className="font-mono text-xs text-[#94A3B8] uppercase tracking-wider">Key Implemented Features:</p>
-                <ul className="space-y-2 text-xs sm:text-sm text-[#CBD5E1]">
+                <p className="font-mono text-xs text-[#A1A1AA] uppercase tracking-wider">Key Implemented Features:</p>
+                <ul className="space-y-2 text-xs sm:text-sm text-[#E5E7EB]">
                   {proj.keyFeatures.map((feat, fIdx) => (
                     <li key={fIdx} className="flex items-start gap-2.5">
                       <span className="text-[#3B82F6] font-bold shrink-0 mt-0.5">▹</span>
@@ -251,8 +251,8 @@ export default function Projects({ onOpenCaseStudy }) {
               </div>
 
               {/* Architecture Snippet Illustration */}
-              <div className="rounded-xl border border-[#263449] bg-[#0B1120] p-3.5 space-y-1 font-mono text-xs">
-                <p className="text-[11px] text-[#94A3B8] uppercase tracking-wider flex items-center gap-1.5">
+              <div className="rounded-xl border border-[#262626] bg-[#161616] p-3.5 space-y-1 font-mono text-xs">
+                <p className="text-[11px] text-[#A1A1AA] uppercase tracking-wider flex items-center gap-1.5">
                   <span>📐</span> Architecture Pipeline:
                 </p>
                 <p className="text-[#22D3EE] text-[11px] sm:text-xs">
@@ -261,18 +261,18 @@ export default function Projects({ onOpenCaseStudy }) {
               </div>
 
               {/* Actual Contribution */}
-              <div className="text-xs text-[#94A3B8] pt-1">
-                <strong className="text-[#CBD5E1] font-mono">My Contribution:</strong> {proj.contribution}
+              <div className="text-xs text-[#A1A1AA] pt-1">
+                <strong className="text-[#E5E7EB] font-mono">My Contribution:</strong> {proj.contribution}
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[#263449]">
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[#262626]">
                 <div className="flex items-center gap-2">
                   <a
                     href={proj.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-full border border-[#263449] bg-[#0F172A] px-4 py-2 text-xs font-mono text-[#CBD5E1] hover:text-[#F8FAFC] hover:border-[#3B82F6] transition-colors"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#161616] px-4 py-2 text-xs font-mono text-[#E5E7EB] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors"
                   >
                     <span>View Repository ↗</span>
                   </a>
@@ -282,7 +282,7 @@ export default function Projects({ onOpenCaseStudy }) {
                       href={proj.liveDemoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[#3B82F6]/50 bg-[#3B82F6]/10 px-4 py-2 text-xs font-mono text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#F8FAFC] transition-colors"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-[#3B82F6]/50 bg-[#3B82F6]/10 px-4 py-2 text-xs font-mono text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#FFFFFF] transition-colors"
                     >
                       <span>Live Demo ↗</span>
                     </a>
@@ -292,7 +292,7 @@ export default function Projects({ onOpenCaseStudy }) {
                 <button
                   onClick={() => onOpenCaseStudy(proj.id)}
                   type="button"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-[#3B82F6]/10 border border-[#3B82F6]/50 px-5 py-2 text-xs font-mono font-bold text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#F8FAFC] transition-all cursor-pointer shadow-sm"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-[#3B82F6]/10 border border-[#3B82F6]/50 px-5 py-2 text-xs font-mono font-bold text-[#3B82F6] hover:bg-[#3B82F6] hover:text-[#FFFFFF] transition-all cursor-pointer shadow-sm"
                 >
                   <span>🔍 View Architecture & Deep Dive</span>
                   <span>→</span>

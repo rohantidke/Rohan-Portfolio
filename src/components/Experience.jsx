@@ -34,7 +34,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="relative px-5 py-14 md:px-8 md:py-20 border-t border-[#263449] bg-[#0B1120]">
+    <section id="experience" className="relative px-5 py-14 md:px-8 md:py-20 border-t border-[#262626] bg-[#000000]">
       <div className="mx-auto w-full max-w-6xl space-y-10">
         
         {/* Section Header */}
@@ -44,13 +44,13 @@ export default function Experience() {
               <span className="h-2 w-2 rounded-full bg-[#3B82F6]"></span>
               Practical Industry Engineering
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#F8FAFC] tracking-tight mt-1">Internship Experience</h2>
-            <p className="mt-1 text-sm text-[#94A3B8]">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#FFFFFF] tracking-tight mt-1">Internship Experience</h2>
+            <p className="mt-1 text-sm text-[#A1A1AA]">
               Verified software engineering internships building production RESTful APIs and layered architectures.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 font-mono text-xs text-[#94A3B8]">
+          <div className="flex items-center gap-2 font-mono text-xs text-[#A1A1AA]">
             <span>Verified credentials & structured Git workflows</span>
           </div>
         </div>
@@ -60,32 +60,32 @@ export default function Experience() {
           {experiences.map((exp, idx) => (
             <article 
               key={idx} 
-              className="rounded-2xl border border-[#263449] bg-[#111C32] p-6 sm:p-8 space-y-6 hover:border-[#3B82F6] transition-all shadow-md flex flex-col justify-between"
+              className="rounded-2xl border border-[#262626] bg-[#101010] p-6 sm:p-8 space-y-6 hover:border-[#3B82F6] transition-all shadow-md flex flex-col justify-between"
             >
               <div className="space-y-4">
                 {/* Header Row */}
-                <div className="border-b border-[#263449] pb-4 space-y-2">
+                <div className="border-b border-[#262626] pb-4 space-y-2">
                   <div className="flex items-center justify-between flex-wrap gap-2">
-                    <span className="text-xs font-mono font-bold text-[#3B82F6] bg-[#0F172A] border border-[#263449] px-3 py-1 rounded-full">
+                    <span className="text-xs font-mono font-bold text-[#3B82F6] bg-[#161616] border border-[#262626] px-3 py-1 rounded-full">
                       {exp.badge}
                     </span>
-                    <span className="text-xs font-mono text-[#94A3B8] font-medium">
+                    <span className="text-xs font-mono text-[#A1A1AA] font-medium">
                       {exp.period}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#F8FAFC] pt-1">
+                  <h3 className="text-xl font-bold text-[#FFFFFF] pt-1">
                     {exp.role}
                   </h3>
 
                   <div className="flex items-center justify-between flex-wrap text-xs font-mono">
-                    <span className="text-[#CBD5E1] font-semibold">{exp.organization}</span>
-                    <span className="text-[#94A3B8] text-[11px]">{exp.certId}</span>
+                    <span className="text-[#E5E7EB] font-semibold">{exp.organization}</span>
+                    <span className="text-[#A1A1AA] text-[11px]">{exp.certId}</span>
                   </div>
                 </div>
 
                 {/* Bullets */}
-                <ul className="space-y-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed">
+                <ul className="space-y-3 text-xs sm:text-sm text-[#E5E7EB] leading-relaxed">
                   {exp.points.map((pt, pIdx) => (
                     <li key={pIdx} className="flex items-start gap-2.5">
                       <span className="text-[#3B82F6] font-bold shrink-0 mt-0.5">▹</span>
@@ -96,15 +96,15 @@ export default function Experience() {
               </div>
 
               {/* Skills Tags */}
-              <div className="pt-4 border-t border-[#263449] space-y-2">
-                <span className="font-mono text-[11px] text-[#94A3B8] uppercase tracking-wider block">
+              <div className="pt-4 border-t border-[#262626] space-y-2">
+                <span className="font-mono text-[11px] text-[#A1A1AA] uppercase tracking-wider block">
                   Technologies & Practices:
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {exp.skills.map((skill, sIdx) => (
                     <span 
                       key={sIdx} 
-                      className="rounded-md border border-[#263449] bg-[#0F172A] px-2.5 py-0.5 text-xs font-mono text-[#CBD5E1]"
+                      className="rounded-md border border-[#262626] bg-[#161616] px-2.5 py-0.5 text-xs font-mono text-[#E5E7EB]"
                     >
                       {skill}
                     </span>

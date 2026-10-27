@@ -285,39 +285,39 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
   const current = data[type] || data.credential;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-[#0B1120]/80 backdrop-blur-sm">
-      <div className="rounded-2xl border border-[#263449] bg-[#111C32] text-[#CBD5E1] max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-[#000000]/80 backdrop-blur-sm">
+      <div className="rounded-2xl border border-[#262626] bg-[#101010] text-[#E5E7EB] max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
         
         {/* Modal Header */}
-        <div className="p-5 sm:p-6 border-b border-[#263449] flex items-start justify-between gap-4 bg-[#0F172A]">
+        <div className="p-5 sm:p-6 border-b border-[#262626] flex items-start justify-between gap-4 bg-[#080808]">
           <div className="space-y-1">
             <span className="text-[11px] font-mono text-[#3B82F6] font-bold uppercase tracking-widest">
               SYSTEM ARCHITECTURE & CASE STUDY
             </span>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#F8FAFC]">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#FFFFFF]">
               {current.title}
             </h3>
-            <p className="text-xs font-mono text-[#94A3B8]">
+            <p className="text-xs font-mono text-[#A1A1AA]">
               {current.stack}
             </p>
           </div>
 
           <button
             onClick={onClose}
-            className="rounded-full bg-[#111C32] border border-[#263449] p-2 text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6] transition-colors"
+            className="rounded-full bg-[#161616] border border-[#262626] p-2 text-[#A1A1AA] hover:text-[#FFFFFF] hover:border-[#3B82F6] transition-colors"
           >
             ✕
           </button>
         </div>
 
         {/* Tab Controls */}
-        <div className="flex items-center gap-2 px-6 pt-4 border-b border-[#263449] bg-[#0B1120]/40 font-mono text-xs">
+        <div className="flex items-center gap-2 px-6 pt-4 border-b border-[#262626] bg-[#000000]/60 font-mono text-xs">
           <button
             onClick={() => setActiveTab('architecture')}
             className={`pb-3 px-2 border-b-2 font-semibold transition-all cursor-pointer ${
               activeTab === 'architecture'
                 ? 'border-[#3B82F6] text-[#3B82F6]'
-                : 'border-transparent text-[#94A3B8] hover:text-[#CBD5E1]'
+                : 'border-transparent text-[#A1A1AA] hover:text-[#FFFFFF]'
             }`}
           >
             📐 Architecture Diagram
@@ -328,7 +328,7 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
             className={`pb-3 px-2 border-b-2 font-semibold transition-all cursor-pointer ${
               activeTab === 'layers'
                 ? 'border-[#3B82F6] text-[#3B82F6]'
-                : 'border-transparent text-[#94A3B8] hover:text-[#CBD5E1]'
+                : 'border-transparent text-[#A1A1AA] hover:text-[#FFFFFF]'
             }`}
           >
             ⚙️ Component Layers
@@ -339,7 +339,7 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
             className={`pb-3 px-2 border-b-2 font-semibold transition-all cursor-pointer ${
               activeTab === 'tradeoffs'
                 ? 'border-[#3B82F6] text-[#3B82F6]'
-                : 'border-transparent text-[#94A3B8] hover:text-[#CBD5E1]'
+                : 'border-transparent text-[#A1A1AA] hover:text-[#FFFFFF]'
             }`}
           >
             ⚖️ Trade-offs & Decisions
@@ -347,14 +347,14 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-5 sm:p-6 overflow-y-auto space-y-5 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed font-sans">
+        <div className="p-5 sm:p-6 overflow-y-auto space-y-5 text-xs sm:text-sm text-[#E5E7EB] leading-relaxed font-sans">
           
           {/* Problem Statement Box */}
-          <div className="rounded-xl border border-[#263449] bg-[#0B1120] p-4 space-y-1">
+          <div className="rounded-xl border border-[#262626] bg-[#161616] p-4 space-y-1">
             <span className="font-mono text-xs text-[#22D3EE] font-semibold uppercase tracking-wider">
               Problem & Engineering Objective:
             </span>
-            <p className="text-[#CBD5E1] text-xs sm:text-sm">
+            <p className="text-[#E5E7EB] text-xs sm:text-sm">
               {current.problem}
             </p>
           </div>
@@ -364,7 +364,7 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
               <span className="font-mono text-xs text-[#3B82F6] font-semibold uppercase tracking-wider">
                 System Topology & Service Flow:
               </span>
-              <pre className="p-4 rounded-xl bg-[#0B1120] border border-[#263449] font-mono text-[10px] sm:text-xs text-[#22D3EE] overflow-x-auto leading-tight shadow-inner">
+              <pre className="p-4 rounded-xl bg-[#161616] border border-[#262626] font-mono text-[10px] sm:text-xs text-[#22D3EE] overflow-x-auto leading-tight shadow-inner">
                 {current.diagram}
               </pre>
             </div>
@@ -377,9 +377,9 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
               </span>
               <div className="space-y-3">
                 {current.architecture.map((item, idx) => (
-                  <div key={idx} className="rounded-xl border border-[#263449] bg-[#0F172A] p-3.5 space-y-1">
-                    <h4 className="font-mono text-xs font-bold text-[#F8FAFC]">{item.layer}</h4>
-                    <p className="text-xs text-[#CBD5E1] leading-relaxed">{item.details}</p>
+                  <div key={idx} className="rounded-xl border border-[#262626] bg-[#161616] p-3.5 space-y-1">
+                    <h4 className="font-mono text-xs font-bold text-[#FFFFFF]">{item.layer}</h4>
+                    <p className="text-xs text-[#E5E7EB] leading-relaxed">{item.details}</p>
                   </div>
                 ))}
               </div>
@@ -393,11 +393,11 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
               </span>
               <div className="space-y-3">
                 {current.tradeoffs.map((item, idx) => (
-                  <div key={idx} className="rounded-xl border border-[#263449] bg-[#0F172A] p-3.5 space-y-1">
-                    <h4 className="font-mono text-xs font-bold text-[#F8FAFC] flex items-center gap-1.5">
+                  <div key={idx} className="rounded-xl border border-[#262626] bg-[#161616] p-3.5 space-y-1">
+                    <h4 className="font-mono text-xs font-bold text-[#FFFFFF] flex items-center gap-1.5">
                       <span>✓</span> {item.title}
                     </h4>
-                    <p className="text-xs text-[#CBD5E1] leading-relaxed">{item.reason}</p>
+                    <p className="text-xs text-[#E5E7EB] leading-relaxed">{item.reason}</p>
                   </div>
                 ))}
               </div>
@@ -407,13 +407,13 @@ export default function CaseStudyModal({ isOpen, onClose, type }) {
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 sm:p-5 border-t border-[#263449] bg-[#0F172A] flex items-center justify-between">
-          <span className="font-mono text-[11px] text-[#94A3B8]">
+        <div className="p-4 sm:p-5 border-t border-[#262626] bg-[#080808] flex items-center justify-between">
+          <span className="font-mono text-[11px] text-[#A1A1AA]">
             Engineered by Rohan Tidke · Java Backend & Distributed Systems
           </span>
           <button
             onClick={onClose}
-            className="rounded-full bg-[#3B82F6] px-5 py-2 text-xs font-mono font-bold text-[#F8FAFC] hover:bg-blue-600 transition-colors cursor-pointer"
+            className="rounded-full bg-[#3B82F6] px-5 py-2 text-xs font-mono font-bold text-[#FFFFFF] hover:bg-[#2563EB] transition-colors cursor-pointer"
           >
             Close Overview
           </button>

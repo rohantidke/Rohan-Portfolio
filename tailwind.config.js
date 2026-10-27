@@ -8,15 +8,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        'portfolio-bg': '#0B1120',
-        'portfolio-alt': '#0F172A',
-        'portfolio-card': '#111C32',
-        'portfolio-border': '#263449',
+        'portfolio-bg': '#000000',
+        'portfolio-alt': '#080808',
+        'portfolio-card': '#101010',
+        'portfolio-elevated': '#161616',
+        'portfolio-border': '#262626',
         'portfolio-blue': '#3B82F6',
         'portfolio-cyan': '#22D3EE',
-        'portfolio-text': '#F8FAFC',
-        'portfolio-body': '#CBD5E1',
-        'portfolio-muted': '#94A3B8',
+        'portfolio-heading': '#FFFFFF',
+        'portfolio-body': '#E5E7EB',
+        'portfolio-secondary': '#A1A1AA',
+        'portfolio-hover': '#60A5FA',
       },
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
